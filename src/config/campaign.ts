@@ -1,0 +1,42 @@
+/**
+ * Dados configuráveis da campanha.
+ * Preencha os campos vazios quando as informações oficiais estiverem disponíveis.
+ * Links vazios são automaticamente ocultados/desativados no site.
+ */
+
+export const campaign = {
+  nome: "Dr. Paulo Coral",
+  cargo: "Candidato a Deputado Estadual por Santa Catarina",
+  numero: "10555",
+
+  /** Somente dígitos, com DDI e DDD. Ex.: "5547999999999" */
+  whatsappNumber: "",
+
+  /** URL do vídeo institucional (YouTube embed, Vimeo, etc.) */
+  videoUrl: "",
+
+  social: {
+    instagram: "",
+    facebook: "",
+    x: "",
+    tiktok: "",
+    whatsapp: "",
+    whatsappGrupo: "",
+  },
+
+  /** Informações eleitorais obrigatórias (CNPJ de campanha, etc.) */
+  legalInformation: "",
+} as const;
+
+export function whatsappLink(mensagem: string): string | null {
+  if (!campaign.whatsappNumber) return campaign.social.whatsapp || null;
+  return `https://wa.me/${campaign.whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
+}
+
+export const mensagens = {
+  voluntario:
+    "Olá! Gostaria de saber como posso participar como voluntário da campanha do Dr. Paulo Coral.",
+  doacao:
+    "Olá! Gostaria de receber informações sobre como apoiar a campanha do Dr. Paulo Coral.",
+  contato: "Olá! Gostaria de falar com a campanha do Dr. Paulo Coral.",
+};
