@@ -12,10 +12,6 @@ export function Hero() {
 
       <div className="relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:pt-20">
         <div className="relative flex justify-start lg:order-first">
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-[6%] hidden h-[70%] w-[68%] rounded-t-[2rem] border border-white/10 bg-white/[0.03] lg:block"
-          />
           <img
             src={foto.url}
             alt="Dr. Paulo Coral, médico, de braços cruzados com estetoscópio"
