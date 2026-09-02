@@ -71,6 +71,7 @@
   --color-navy-600: oklch(0.338 0.109 264.9);
   --color-navy: oklch(0.234 0.096 267.5);
   --color-navy-2: oklch(0.293 0.103 265.5);
+  --color-navy-logo: #001032;
 
   --color-gold-300: oklch(0.905 0.109 91.5);
   --color-gold-400: oklch(0.865 0.145 87.5);

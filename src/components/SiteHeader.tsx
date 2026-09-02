@@ -27,7 +27,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-navy-900 transition-[height,box-shadow] duration-300 ${
+      className={`sticky top-0 z-50 bg-navy-logo transition-[height,box-shadow] duration-300 ${
         scrolled ? "shadow-[0_6px_24px_rgba(0,16,47,0.35)]" : ""
       }`}
     >
