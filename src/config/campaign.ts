@@ -16,12 +16,11 @@ export const campaign = {
   videoUrl: "",
 
   social: {
-    instagram: "",
-    facebook: "",
-    x: "",
-    tiktok: "",
-    whatsapp: "",
-    whatsappGrupo: "",
+    instagram: "https://www.instagram.com/drpaulocoral/",
+    facebook: "https://www.facebook.com/share/1HbfXrcYEX/",
+    threads: "https://www.threads.com/@paulocoral.oficial",
+    whatsapp: "https://wa.me/message/FPGGAPYBDVHUF1",
+    whatsappGrupo: "https://chat.whatsapp.com/JtyrtijyEGXCrAq0aTlRll",
   },
 
   /** Informações eleitorais obrigatórias (CNPJ de campanha, etc.) */
