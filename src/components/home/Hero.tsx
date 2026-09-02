@@ -15,8 +15,8 @@ export function Hero() {
           <img
             src={foto.url}
             alt="Dr. Paulo Coral, médico, de braços cruzados com estetoscópio"
-            width={784}
-            height={1160}
+            width={848}
+            height={1264}
             fetchPriority="high"
             decoding="async"
             className="relative z-10 w-[min(100%,30rem)] max-w-full object-contain drop-shadow-2xl"
