@@ -9,9 +9,9 @@ export function SiteFooter() {
     <footer className="relative bg-navy-950 text-white">
       <BrandStar
         aria-hidden="true"
-        className="absolute top-4 right-3 h-16 w-16 text-gold-500/75 md:hidden"
+        className="absolute top-4 right-3 h-16 w-16 text-gold-500/75 lg:hidden"
       />
-      <div className="container-site grid gap-10 py-14 lg:grid-cols-[1.3fr_0.7fr_1fr]">
+      <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
           <img
             src={logoLight.url}
@@ -27,10 +27,10 @@ export function SiteFooter() {
           <p className="mt-1 eyebrow text-white/45">Cuidar. Gerar. Servir.</p>
         </div>
 
-        <nav aria-label="Rodapé">
+        <nav aria-label="Rodapé" className="md:col-start-2">
           <h2 className="eyebrow text-white/45">Navegação</h2>
           <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
-          <ul className="mt-4 space-y-2.5 text-sm">
+          <ul className="mt-4 space-y-2.5 text-sm md:flex md:flex-wrap md:gap-x-6 md:gap-y-2">
             <li>
               <Link to="/" hash="topo" className="text-white/80 hover:text-gold-500">
                 Início
