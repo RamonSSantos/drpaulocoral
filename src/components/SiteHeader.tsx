@@ -66,8 +66,8 @@ export function SiteHeader() {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           className="grid h-11 w-11 place-items-center rounded-lg border border-white/20 text-white lg:hidden"
         >
-          {open ? <Menu className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          {open ? <X className="sr-only" /> : null}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+
         </button>
       </div>
 
