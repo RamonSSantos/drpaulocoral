@@ -27,7 +27,7 @@ export function SiteFooter() {
           <p className="mt-1 eyebrow text-white/45">Cuidar. Gerar. Servir.</p>
         </div>
 
-        <div className="md:col-start-2 lg:grid lg:grid-cols-2 lg:gap-10">
+        <div className="md:col-start-2 md:pt-8 lg:grid lg:grid-cols-2 lg:gap-10 lg:pt-0">
           <nav aria-label="Rodapé">
             <h2 className="eyebrow text-white/45">Navegação</h2>
             <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
