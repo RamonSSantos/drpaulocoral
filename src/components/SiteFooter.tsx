@@ -6,12 +6,12 @@ import { BrandStar } from "@/components/BrandDecor";
 
 export function SiteFooter() {
   return (
-    <footer className="relative bg-navy-950 text-white">
+    <footer className="relative bg-navy-logo text-white">
       <BrandStar
         aria-hidden="true"
         className="absolute top-4 right-3 h-16 w-16 text-gold-500/75 lg:hidden"
       />
-      <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_1fr]">
+      <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.2fr_1.8fr]">
         <div>
           <img
             src={logoLight.url}
@@ -27,38 +27,40 @@ export function SiteFooter() {
           <p className="mt-1 eyebrow text-white/45">Cuidar. Gerar. Servir.</p>
         </div>
 
-        <nav aria-label="Rodapé" className="md:col-start-2">
-          <h2 className="eyebrow text-white/45">Navegação</h2>
-          <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
-          <ul className="mt-4 space-y-2.5 text-sm md:flex md:flex-wrap md:gap-x-6 md:gap-y-2">
-            <li>
-              <Link to="/" hash="topo" className="text-white/80 hover:text-gold-500">
-                Início
-              </Link>
-            </li>
-            <li>
-              <Link to="/" hash="sobre" className="text-white/80 hover:text-gold-500">
-                Sobre
-              </Link>
-            </li>
-            <li>
-              <Link to="/plano-parlamentar" className="text-white/80 hover:text-gold-500">
-                Plano Parlamentar
-              </Link>
-            </li>
-            <li>
-              <Link to="/" hash="faca-parte" className="text-white/80 hover:text-gold-500">
-                Contato
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="md:col-start-2 lg:grid lg:grid-cols-2 lg:gap-10">
+          <nav aria-label="Rodapé">
+            <h2 className="eyebrow text-white/45">Navegação</h2>
+            <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
+            <ul className="mt-4 space-y-2.5 text-sm md:flex md:flex-wrap md:gap-x-6 md:gap-y-2">
+              <li>
+                <Link to="/" hash="topo" className="text-white/80 hover:text-gold-500">
+                  Início
+                </Link>
+              </li>
+              <li>
+                <Link to="/" hash="sobre" className="text-white/80 hover:text-gold-500">
+                  Sobre
+                </Link>
+              </li>
+              <li>
+                <Link to="/plano-parlamentar" className="text-white/80 hover:text-gold-500">
+                  Plano Parlamentar
+                </Link>
+              </li>
+              <li>
+                <Link to="/" hash="faca-parte" className="text-white/80 hover:text-gold-500">
+                  Contato
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-        <div className="md:col-start-2">
-          <h2 className="eyebrow text-white/45">Redes</h2>
-          <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
-          <div className="mt-4">
-            <SocialLinks />
+          <div>
+            <h2 className="eyebrow text-white/45">Redes</h2>
+            <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
+            <div className="mt-4">
+              <SocialLinks />
+            </div>
           </div>
         </div>
       </div>
