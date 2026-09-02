@@ -48,9 +48,9 @@ export function SiteHeader() {
 
         <nav
           aria-label="Principal"
-          className="hidden flex-1 items-center justify-between pl-8 lg:flex xl:pl-16"
+          className="hidden flex-1 items-center justify-between pl-6 md:flex lg:pl-8 xl:pl-16"
         >
-          <div className="flex flex-1 items-center justify-evenly">
+          <div className="flex flex-1 items-center justify-evenly gap-2">
             {nav.map((item) => (
               <Link key={item.label} to={item.to} hash={item.hash} className={linkClass}>
                 {item.label}
@@ -65,7 +65,7 @@ export function SiteHeader() {
             aria-disabled={!wa}
             target="_blank"
             rel="noopener noreferrer"
-            className={`ml-8 inline-flex shrink-0 items-center gap-2 rounded-xl bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-colors hover:bg-gold-400 xl:ml-12 ${
+            className={`ml-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-gold-500 px-4 py-2.5 text-sm font-bold text-navy-900 transition-colors hover:bg-gold-400 md:ml-6 lg:ml-8 lg:px-5 xl:ml-12 ${
               wa ? "" : "pointer-events-none opacity-50"
             }`}
           >
@@ -80,7 +80,7 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
-          className="grid h-11 w-11 place-items-center rounded-xl border border-white/15 text-white transition-colors hover:border-gold-500 hover:text-gold-500 lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-xl border border-white/15 text-white transition-colors hover:border-gold-500 hover:text-gold-500 md:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -92,7 +92,7 @@ export function SiteHeader() {
         <nav
           id="menu-mobile"
           aria-label="Menu mobile"
-          className="border-b border-white/10 bg-navy-logo px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 lg:hidden"
+          className="border-b border-white/10 bg-navy-logo px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 md:hidden"
         >
           <ul className="flex flex-col divide-y divide-white/10">
             {nav.map((item) => (
