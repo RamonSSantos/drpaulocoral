@@ -10,8 +10,24 @@ export function Hero() {
       <DecorDark />
       <div aria-hidden="true" className="absolute bottom-0 left-0 h-1 w-full hairline-gold" />
 
-      <div className="container-site relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[1.06fr_0.94fr] lg:pt-20">
-        <div className="pb-14 lg:pb-24">
+      <div className="relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:pt-20">
+        <div className="relative flex justify-start lg:order-first">
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-[6%] hidden h-[70%] w-[68%] rounded-t-[2rem] border border-white/10 bg-white/[0.03] lg:block"
+          />
+          <img
+            src={foto.url}
+            alt="Dr. Paulo Coral, médico, de braços cruzados com estetoscópio"
+            width={784}
+            height={1160}
+            fetchPriority="high"
+            decoding="async"
+            className="relative z-10 w-[min(100%,30rem)] max-w-full object-contain drop-shadow-2xl"
+          />
+        </div>
+
+        <div className="order-first px-[clamp(1.25rem,4vw,3rem)] pb-14 lg:order-none lg:pb-24 lg:pl-0 lg:pr-[max(clamp(1.25rem,4vw,3rem),calc((100vw-80rem)/2+1.25rem))]">
           <p className="inline-flex items-center gap-2 rounded-full border border-gold-500/45 bg-white/[0.04] px-4 py-1.5 eyebrow text-gold-400 animate-[fade-up_0.5s_ease-out_both]">
             <BrandStar className="h-3 w-3" />
             Santa Catarina • 2026
