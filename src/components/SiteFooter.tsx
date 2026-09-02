@@ -5,8 +5,8 @@ import { SocialLinks } from "@/components/SocialLinks";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr]">
+    <footer className="bg-navy-950 text-white">
+      <div className="container-site grid gap-10 py-14 lg:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
           <img
             src={logoLight.url}
@@ -14,34 +14,35 @@ export function SiteFooter() {
             width={220}
             height={110}
             loading="lazy"
-            className="h-12 w-auto"
+            className="h-11 w-auto"
           />
-          <p className="mt-4 max-w-xs text-sm text-white/70">{campaign.cargo}</p>
-          <p className="mt-3 text-3xl font-extrabold tracking-tight text-gold">
-            {campaign.numero}
+          <p className="mt-5 text-sm font-semibold text-white/80">
+            Deputado Estadual — <span className="text-gold-500">{campaign.numero}</span>
           </p>
+          <p className="mt-1 eyebrow text-white/45">Cuidar. Gerar. Servir.</p>
         </div>
 
         <nav aria-label="Rodapé">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-white/60">Navegação</h2>
-          <ul className="mt-4 space-y-2 text-sm">
+          <h2 className="eyebrow text-white/45">Navegação</h2>
+          <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
+          <ul className="mt-4 space-y-2.5 text-sm">
             <li>
-              <Link to="/" hash="topo" className="text-white/85 hover:text-gold">
+              <Link to="/" hash="topo" className="text-white/80 hover:text-gold-500">
                 Início
               </Link>
             </li>
             <li>
-              <Link to="/" hash="sobre" className="text-white/85 hover:text-gold">
+              <Link to="/" hash="sobre" className="text-white/80 hover:text-gold-500">
                 Sobre
               </Link>
             </li>
             <li>
-              <Link to="/plano-parlamentar" className="text-white/85 hover:text-gold">
+              <Link to="/plano-parlamentar" className="text-white/80 hover:text-gold-500">
                 Plano Parlamentar
               </Link>
             </li>
             <li>
-              <Link to="/" hash="faca-parte" className="text-white/85 hover:text-gold">
+              <Link to="/" hash="faca-parte" className="text-white/80 hover:text-gold-500">
                 Contato
               </Link>
             </li>
@@ -49,7 +50,8 @@ export function SiteFooter() {
         </nav>
 
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-white/60">Redes</h2>
+          <h2 className="eyebrow text-white/45">Redes</h2>
+          <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
           <div className="mt-4">
             <SocialLinks />
           </div>
@@ -57,7 +59,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-6 text-xs leading-relaxed text-white/55 sm:px-6">
+        <div className="container-site py-6 text-xs leading-relaxed text-white/50">
           {campaign.legalInformation || "Informações eleitorais obrigatórias em breve."}
         </div>
       </div>

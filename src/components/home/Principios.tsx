@@ -1,5 +1,6 @@
 import { HandHeart, Rocket, Stethoscope } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { DecorDark } from "@/components/BrandDecor";
 
 const principios = [
   {
@@ -12,43 +13,47 @@ const principios = [
   {
     Icon: Rocket,
     titulo: "Gerar",
-    subtitulo: "Empreendedorismo e oportunidades",
-    texto: "Estimular novos negócios, reduzir burocracias e gerar emprego e renda.",
+    subtitulo: "Empreendedorismo",
+    texto: "Estimular novos negócios, reduzir burocracias e gerar oportunidades.",
   },
   {
     Icon: HandHeart,
     titulo: "Servir",
-    subtitulo: "Política limpa e eficiente",
-    texto:
-      "Atuação ética, transparente, fiscalizadora e responsável com o dinheiro público.",
+    subtitulo: "Política limpa",
+    texto: "Atuação ética, transparente e responsável com o dinheiro público.",
   },
 ];
 
 export function Principios() {
   return (
-    <section className="bg-navy py-16 text-white sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="relative isolate section-y overflow-hidden bg-navy-900 text-white">
+      <DecorDark />
+      <div className="container-site relative">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Cuidar. Gerar. <span className="text-gold">Servir.</span>
+          <p className="eyebrow flex items-center gap-3 text-gold-400">
+            <span aria-hidden="true" className="h-px w-10 hairline-gold" />
+            Princípios
+          </p>
+          <h2 className="mt-4 text-h2">
+            Cuidar. Gerar. <span className="text-gold-500">Servir.</span>
           </h2>
-          <p className="mt-3 max-w-2xl text-base text-white/75">
-            Os três princípios que orientam o projeto de mandato.
+          <p className="mt-4 measure text-body-lg text-white/70">
+            Três princípios para um mandato comprometido com Santa Catarina.
           </p>
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {principios.map(({ Icon, titulo, subtitulo, texto }, i) => (
             <Reveal key={titulo} delay={i * 90}>
-              <article className="h-full rounded-2xl border border-white/12 bg-white/5 p-7">
-                <span className="grid h-12 w-12 place-items-center rounded-xl bg-gold text-navy">
-                  <Icon className="h-6 w-6" aria-hidden="true" />
+              <article className="group h-full rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-8 transition-[border-color,transform,background-color] duration-300 hover:-translate-y-1 hover:border-gold-500/60 hover:bg-white/[0.06]">
+                <span className="grid h-12 w-12 place-items-center rounded-xl border border-gold-500/40 text-gold-500 transition-transform duration-300 group-hover:-translate-y-0.5">
+                  <Icon className="h-6 w-6" strokeWidth={1.6} aria-hidden="true" />
                 </span>
-                <h3 className="mt-5 text-2xl font-extrabold uppercase tracking-tight text-gold">
+                <h3 className="mt-6 text-h3 uppercase tracking-tight text-white transition-colors group-hover:text-gold-500">
                   {titulo}
                 </h3>
-                <p className="mt-1 text-sm font-semibold text-white">{subtitulo}</p>
-                <p className="mt-3 text-sm leading-relaxed text-white/75">{texto}</p>
+                <p className="mt-1 eyebrow text-gold-400">{subtitulo}</p>
+                <p className="mt-4 text-sm leading-relaxed text-white/70">{texto}</p>
               </article>
             </Reveal>
           ))}

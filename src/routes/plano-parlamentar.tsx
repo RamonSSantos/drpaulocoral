@@ -30,28 +30,45 @@ function PlanoParlamentar() {
     <>
       <SiteHeader />
       <main>
-        <section className="bg-navy py-16 text-white sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Plano <span className="text-gold">Parlamentar</span>
+        <section className="relative isolate overflow-hidden bg-navy-900 py-16 text-white sm:py-24">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl"
+          />
+          <div className="container-site relative">
+            <p className="eyebrow flex items-center gap-3 text-gold-400">
+              <span aria-hidden="true" className="h-px w-10 hairline-gold" />
+              15 propostas • 4 eixos
+            </p>
+            <h1 className="mt-4 text-h1">
+              Plano <span className="text-gold-500">Parlamentar</span>
             </h1>
-            <p className="mt-4 max-w-2xl text-base text-white/80">
+            <p className="mt-4 measure text-body-lg text-white/75">
               Quatro eixos orientam o plano de ação parlamentar de Dr. Paulo Coral.
             </p>
           </div>
         </section>
 
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 lg:grid-cols-2">
+        <section className="section-y">
+          <div className="container-site grid gap-6 lg:grid-cols-2">
             {eixos.map((e) => (
               <article
                 key={e.numero}
-                className="rounded-2xl border border-border bg-card p-8 shadow-sm"
+                className="rounded-[1.25rem] border border-border bg-card p-8"
+                style={{ boxShadow: "var(--shadow-card)" }}
               >
-                <p className="text-sm font-extrabold tracking-widest text-gold">{e.numero}</p>
-                <h2 className="mt-2 text-2xl font-bold text-navy">{e.titulo}</h2>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{e.texto}</p>
-                <p className="mt-5 inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-navy">
+                <div className="flex items-start justify-between">
+                  <span className="text-2xl font-black tracking-tight text-navy-900/15">
+                    {e.numero}
+                  </span>
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-navy-900 text-gold-500">
+                    <e.Icon className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
+                  </span>
+                </div>
+                <h2 className="mt-6 text-h3 uppercase tracking-tight text-navy-900">{e.titulo}</h2>
+                <p className="mt-2 text-base font-semibold text-navy-700">{e.resumo}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{e.texto}</p>
+                <p className="mt-6 inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-bold text-navy-900">
                   {e.propostas} propostas
                 </p>
                 <p className="mt-5 text-sm text-muted-foreground">
@@ -61,12 +78,15 @@ function PlanoParlamentar() {
             ))}
           </div>
 
-          <div className="mx-auto mt-12 max-w-6xl px-4 sm:px-6">
+          <div className="container-site mt-12">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-base font-bold text-navy hover:text-navy-2"
+              className="group inline-flex items-center gap-2 text-base font-bold text-navy-900 hover:text-gold-600"
             >
-              <ArrowLeft className="h-5 w-5" aria-hidden="true" />
+              <ArrowLeft
+                className="h-5 w-5 transition-transform group-hover:-translate-x-1"
+                aria-hidden="true"
+              />
               Voltar para a página inicial
             </Link>
           </div>

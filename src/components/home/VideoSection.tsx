@@ -9,19 +9,24 @@ export function VideoSection() {
   const hasVideo = Boolean(campaign.videoUrl);
 
   return (
-    <section id="video" className="bg-secondary py-16 sm:py-20">
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+    <section id="video" className="section-y bg-neutral-50/60">
+      <div className="container-site">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-            Conheça Dr. Paulo Coral
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">
+          <p className="eyebrow flex items-center gap-3 text-navy-700">
+            <span aria-hidden="true" className="h-px w-10 hairline-gold" />
+            Conheça o candidato
+          </p>
+          <h2 className="mt-4 text-h2 text-navy-900">Conheça Dr. Paulo Coral</h2>
+          <p className="mt-4 measure text-body-lg text-muted-foreground">
             Conheça sua trajetória, sua experiência e sua visão para Santa Catarina.
           </p>
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-navy shadow-sm">
+          <div
+            className="mt-10 overflow-hidden rounded-[1.5rem] bg-navy-900"
+            style={{ boxShadow: "var(--shadow-card)" }}
+          >
             <div className="relative aspect-video w-full">
               {playing && hasVideo ? (
                 <iframe
@@ -49,9 +54,9 @@ export function VideoSection() {
                     aria-label={
                       hasVideo ? "Reproduzir vídeo institucional" : "Vídeo disponível em breve"
                     }
-                    className="absolute inset-0 grid place-items-center bg-navy/35 transition-colors hover:bg-navy/45 disabled:cursor-not-allowed"
+                    className="group absolute inset-0 grid place-items-center bg-navy-950/35 transition-colors hover:bg-navy-950/45 disabled:cursor-not-allowed"
                   >
-                    <span className="grid h-20 w-20 place-items-center rounded-full bg-gold text-navy shadow-lg">
+                    <span className="grid h-20 w-20 place-items-center rounded-full bg-gold-500 text-navy-900 transition-transform group-hover:scale-105">
                       <Play className="h-8 w-8 translate-x-0.5" aria-hidden="true" />
                     </span>
                   </button>

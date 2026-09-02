@@ -3,18 +3,21 @@ import { SocialLinks } from "@/components/SocialLinks";
 
 export function Acompanhe() {
   return (
-    <section id="acompanhe" className="py-16 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="acompanhe" className="section-y">
+      <div className="container-site grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-            Acompanhe Dr. Paulo Coral
-          </h2>
-          <p className="mt-3 max-w-2xl text-base text-muted-foreground">
-            Acompanhe os canais oficiais e fique por dentro das informações da campanha.
+          <p className="eyebrow flex items-center gap-3 text-navy-700">
+            <span aria-hidden="true" className="h-px w-10 hairline-gold" />
+            Canais oficiais
           </p>
-          <div className="mt-8">
-            <SocialLinks variant="dark" />
-          </div>
+          <h2 className="mt-4 text-h2 text-navy-900">Acompanhe Dr. Paulo Coral</h2>
+          <p className="mt-4 measure text-body-lg text-muted-foreground">
+            Fique por dentro das informações da campanha nos canais oficiais.
+          </p>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <SocialLinks variant="dark" />
         </Reveal>
       </div>
     </section>

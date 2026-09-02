@@ -24,11 +24,11 @@ const items = [
 export function SocialLinks({ variant = "light" }: { variant?: "light" | "dark" }) {
   const base =
     variant === "light"
-      ? "border-white/20 bg-white/5 text-white hover:border-gold hover:text-gold"
-      : "border-border bg-secondary text-primary hover:border-gold hover:text-navy";
+      ? "border-white/12 text-white/85 hover:border-gold-500 hover:text-gold-500"
+      : "border-border text-navy-900 hover:border-gold-500 hover:text-gold-600";
 
   return (
-    <ul className="flex flex-wrap items-center gap-3">
+    <ul className="grid grid-cols-3 gap-3 sm:grid-cols-6 lg:grid-cols-3">
       {items.map(({ key, label, href, Icon }) => {
         const enabled = Boolean(href);
         return (
@@ -37,14 +37,14 @@ export function SocialLinks({ variant = "light" }: { variant?: "light" | "dark" 
               href={href || undefined}
               target={enabled ? "_blank" : undefined}
               rel={enabled ? "noopener noreferrer" : undefined}
-              aria-label={label}
               aria-disabled={!enabled}
               title={enabled ? label : `${label} — link em breve`}
-              className={`grid h-12 w-12 place-items-center rounded-xl border transition-colors ${base} ${
+              className={`flex h-12 items-center justify-center gap-2 rounded-xl border px-3 transition-colors ${base} ${
                 enabled ? "" : "pointer-events-none opacity-40"
               }`}
             >
               <Icon className="h-5 w-5" />
+              <span className="sr-only">{label}</span>
             </a>
           </li>
         );
