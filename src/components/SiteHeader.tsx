@@ -27,7 +27,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-navy-900 transition-[height,box-shadow] duration-300 ${
+      className={`sticky top-0 z-50 bg-navy-logo transition-[height,box-shadow] duration-300 ${
         scrolled ? "shadow-[0_6px_24px_rgba(0,16,47,0.35)]" : ""
       }`}
     >
@@ -87,7 +87,7 @@ export function SiteHeader() {
         <nav
           id="menu-mobile"
           aria-label="Menu mobile"
-          className="border-b border-white/10 bg-navy-900 px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 lg:hidden"
+          className="border-b border-white/10 bg-navy-logo px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 lg:hidden"
         >
           <ul className="flex flex-col divide-y divide-white/10">
             {nav.map((item) => (
