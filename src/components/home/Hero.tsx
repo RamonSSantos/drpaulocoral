@@ -65,22 +65,6 @@ export function Hero() {
             <p className="eyebrow text-white/60">Cuidar. Gerar. Servir.</p>
           </div>
         </div>
-
-        <div className="relative flex justify-center lg:justify-end">
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 right-[6%] hidden h-[70%] w-[68%] rounded-t-[2rem] border border-white/10 bg-white/[0.03] lg:block"
-          />
-          <img
-            src={foto.url}
-            alt="Dr. Paulo Coral, médico, de braços cruzados com estetoscópio"
-            width={784}
-            height={1160}
-            fetchPriority="high"
-            decoding="async"
-            className="relative z-10 w-[min(100%,30rem)] max-w-full object-contain drop-shadow-2xl"
-          />
-        </div>
       </div>
     </section>
   );
