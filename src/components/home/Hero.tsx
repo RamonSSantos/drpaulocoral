@@ -13,9 +13,9 @@ export function Hero() {
       {/* Estrela institucional no canto superior direito, acima do texto */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[max(clamp(1rem,4vw,3rem),calc((100vw-80rem)/2+1rem))] top-10 z-0 hidden animate-[fade-up_0.8s_ease-out_0.3s_both] lg:block"
+        className="pointer-events-none absolute right-[max(clamp(1rem,4vw,3rem),calc((100vw-80rem)/2+1rem))] top-10 z-0 hidden animate-[fade-up_0.8s_ease-out_0.3s_both] md:block"
       >
-        <BrandStar className="h-28 w-28 text-gold-500/90 drop-shadow-[0_0_35px_rgba(255,194,14,0.35)] xl:h-36 xl:w-36" />
+        <BrandStar className="h-20 w-20 text-gold-500/90 drop-shadow-[0_0_35px_rgba(255,194,14,0.35)] lg:h-28 lg:w-28 xl:h-36 xl:w-36" />
       </div>
 
       <div className="relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:pt-20">
