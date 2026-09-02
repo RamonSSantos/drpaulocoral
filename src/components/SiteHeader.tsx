@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import logoLight from "@/assets/logo-light.png.asset.json";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
 const nav = [
@@ -69,7 +70,7 @@ export function SiteHeader() {
               wa ? "" : "pointer-events-none opacity-50"
             }`}
           >
-            <MessageCircle className="h-4 w-4" aria-hidden="true" />
+            <WhatsAppIcon className="h-4 w-4" aria-hidden="true" />
             WhatsApp
           </a>
         </nav>
@@ -126,7 +127,7 @@ export function SiteHeader() {
               wa ? "" : "pointer-events-none opacity-50"
             }`}
           >
-            <MessageCircle className="h-5 w-5" aria-hidden="true" />
+            <WhatsAppIcon className="h-5 w-5" aria-hidden="true" />
             Falar no WhatsApp
           </a>
         </nav>
