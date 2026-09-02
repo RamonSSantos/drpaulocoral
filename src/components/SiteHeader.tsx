@@ -46,21 +46,26 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
-          {nav.map((item) => (
-            <Link key={item.label} to={item.to} hash={item.hash} className={linkClass}>
-              {item.label}
+        <nav
+          aria-label="Principal"
+          className="hidden flex-1 items-center justify-between pl-8 lg:flex xl:pl-16"
+        >
+          <div className="flex flex-1 items-center justify-evenly">
+            {nav.map((item) => (
+              <Link key={item.label} to={item.to} hash={item.hash} className={linkClass}>
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/plano-parlamentar" className={linkClass}>
+              Plano Parlamentar
             </Link>
-          ))}
-          <Link to="/plano-parlamentar" className={linkClass}>
-            Plano Parlamentar
-          </Link>
+          </div>
           <a
             href={wa ?? undefined}
             aria-disabled={!wa}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 rounded-xl bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-colors hover:bg-gold-400 ${
+            className={`ml-8 inline-flex shrink-0 items-center gap-2 rounded-xl bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-colors hover:bg-gold-400 xl:ml-12 ${
               wa ? "" : "pointer-events-none opacity-50"
             }`}
           >
