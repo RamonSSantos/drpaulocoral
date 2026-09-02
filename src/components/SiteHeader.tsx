@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import logoLight from "@/assets/logo-light.png.asset.json";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
 const nav = [
