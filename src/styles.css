@@ -98,9 +98,9 @@
 
 /* Escala tipográfica fluida (mobile -> desktop) */
 @utility text-display {
-  font-size: clamp(2.625rem, 6.2vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   font-weight: 900;
 }
 
