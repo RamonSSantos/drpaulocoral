@@ -87,7 +87,7 @@ export function SiteHeader() {
         <nav
           id="menu-mobile"
           aria-label="Menu mobile"
-          className="border-b border-white/10 bg-navy-900 px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 lg:hidden"
+          className="border-b border-white/10 bg-navy-logo px-[clamp(1.25rem,4vw,3rem)] pb-7 pt-2 lg:hidden"
         >
           <ul className="flex flex-col divide-y divide-white/10">
             {nav.map((item) => (
