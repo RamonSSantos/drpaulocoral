@@ -54,7 +54,7 @@ export function SiteFooter() {
           </ul>
         </nav>
 
-        <div>
+        <div className="md:col-start-2">
           <h2 className="eyebrow text-white/45">Redes</h2>
           <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
           <div className="mt-4">
