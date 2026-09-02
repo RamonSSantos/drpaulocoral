@@ -23,7 +23,7 @@ export function DecorDark({ className = "" }: { className?: string }) {
       >
         <path d="M-40 400 L400 -40 M20 400 L400 20 M80 400 L400 80" />
       </svg>
-      <BrandStar className="absolute left-[4%] top-[14%] h-24 w-24 text-gold/[0.07]" />
+      
     </div>
   );
 }
