@@ -40,7 +40,7 @@ export function VideoSection() {
                     height={1080}
                     loading="lazy"
                     decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover object-top"
+                    className="absolute inset-0 h-full w-full object-cover object-bottom"
                   />
                   <button
                     type="button"
