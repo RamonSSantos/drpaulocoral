@@ -9,7 +9,7 @@ export function SiteFooter() {
     <footer className="relative bg-navy-950 text-white">
       <BrandStar
         aria-hidden="true"
-        className="absolute -top-7 right-3 h-20 w-20 text-gold-500/75 md:hidden"
+        className="absolute top-4 right-3 h-16 w-16 text-gold-500/75 md:hidden"
       />
       <div className="container-site grid gap-10 py-14 lg:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
