@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { BrandStar } from "@/components/BrandDecor";
-import retrato from "@/assets/paulo-coral-10555.png.asset.json";
+import retrato from "@/assets/paulo-coral-trajetoria.png.asset.json";
 
 const destaques = [
   { valor: "9", unidade: "anos", texto: "Atuação no SUS e Estratégia Saúde da Família." },
@@ -37,12 +37,12 @@ export function Sobre() {
           <div className="relative overflow-hidden rounded-[1.25rem] bg-navy-900">
             <img
               src={retrato.url}
-              alt="Dr. Paulo Coral em material oficial da campanha 10555"
-              width={1080}
-              height={1080}
+              alt="Dr. Paulo Coral"
+              width={812}
+              height={1039}
               loading="lazy"
               decoding="async"
-              className="aspect-square w-full object-cover object-top"
+              className="aspect-[3/4] w-full object-cover object-top"
             />
           </div>
           <BrandStar
