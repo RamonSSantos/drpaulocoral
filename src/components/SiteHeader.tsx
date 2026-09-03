@@ -8,6 +8,7 @@ import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 const nav = [
   { label: "Início", to: "/", hash: "topo" },
   { label: "Sobre", to: "/", hash: "sobre" },
+  { label: "Plano Parlamentar", to: "/plano-parlamentar" },
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
