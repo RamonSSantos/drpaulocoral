@@ -47,7 +47,7 @@ const destaques = [
 ];
 
 function PlanoParlamentar() {
-  const whatsapp = whatsappLink(mensagens.contato) ?? campaign.social.whatsapp;
+  const whatsapp = whatsappLink(mensagens.plano) ?? campaign.social.whatsapp;
 
   return (
     <>
