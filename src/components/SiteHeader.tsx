@@ -11,7 +11,8 @@ const nav = [
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
-const SECTIONS = ["topo", "sobre", "faca-parte"];
+const SECTIONS = ["topo", "sobre", "plano-parlamentar", "compromisso", "faca-parte"];
+const PLANO_SECTIONS = new Set(["plano-parlamentar", "compromisso"]);
 
 function useActiveSection() {
   const [activeHash, setActiveHash] = useState("topo");
@@ -57,7 +58,8 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const activeHash = useActiveSection();
-  const isPlano = location.pathname === "/plano-parlamentar";
+  const isPlanoPage = location.pathname === "/plano-parlamentar";
+  const isPlanoSection = PLANO_SECTIONS.has(activeHash);
   const wa = whatsappLink(mensagens.contato);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export function SiteHeader() {
   const linkActive = "text-gold-500 after:w-full";
 
   const sectionClass = (hash: string) =>
-    `${linkBase} ${activeHash === hash && !isPlano ? linkActive : linkInactive}`;
+    `${linkBase} ${activeHash === hash && !isPlanoPage && !isPlanoSection ? linkActive : linkInactive}`;
 
   return (
     <header
@@ -108,7 +110,7 @@ export function SiteHeader() {
             ))}
             <Link
               to="/plano-parlamentar"
-              className={`${linkBase} ${isPlano ? linkActive : linkInactive}`}
+              className={`${linkBase} ${isPlanoPage || isPlanoSection ? linkActive : linkInactive}`}
             >
               Plano Parlamentar
             </Link>
@@ -155,7 +157,9 @@ export function SiteHeader() {
                   hash={item.hash}
                   onClick={() => setOpen(false)}
                   className={`block py-4 text-base font-semibold transition-colors ${
-                    activeHash === item.hash && !isPlano ? "text-gold-500" : "text-white/90"
+                    activeHash === item.hash && !isPlanoPage && !isPlanoSection
+                      ? "text-gold-500"
+                      : "text-white/90"
                   }`}
                 >
                   {item.label}
@@ -167,7 +171,7 @@ export function SiteHeader() {
                 to="/plano-parlamentar"
                 onClick={() => setOpen(false)}
                 className={`block py-4 text-base font-semibold transition-colors ${
-                  isPlano ? "text-gold-500" : "text-white/90"
+                  isPlanoPage || isPlanoSection ? "text-gold-500" : "text-white/90"
                 }`}
               >
                 Plano Parlamentar

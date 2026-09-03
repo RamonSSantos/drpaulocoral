@@ -41,7 +41,7 @@ export const eixos = [
 
 export function PlanoResumo() {
   return (
-    <section id="plano" className="relative isolate section-y overflow-hidden bg-neutral-50/60">
+    <section id="plano-parlamentar" className="relative isolate section-y overflow-hidden bg-neutral-50/60">
       <DecorLight />
       <div className="container-site relative">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
