@@ -11,22 +11,33 @@ import { Compromisso } from "@/components/home/Compromisso";
 import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
 
-const title = "Dr. Paulo Coral | Candidato a Deputado Estadual por Santa Catarina";
+const siteUrl = "https://drpaulocoral.lovable.app";
+const ogImage = `${siteUrl}/__l5e/assets-v1/6318dd6b-6f41-464e-a701-227d0189e37f/paulo-coral-10555.png`;
+
+const title =
+  "Dr. Paulo Coral 10555 | Deputado Estadual por Santa Catarina";
 const description =
-  "Conheça Dr. Paulo Coral, médico e ex-vereador, candidato a Deputado Estadual por Santa Catarina. Conheça sua trajetória, compromissos e plano parlamentar.";
+  "Conheça Dr. Paulo Coral 10555, candidato a Deputado Estadual por Santa Catarina. Médico, ex-vereador e empreendedor com propostas para Saúde, Emprego, Educação e Segurança. Acesse o Plano Parlamentar e faça parte da campanha.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
+      { name: "keywords", content: "Dr. Paulo Coral, 10555, Deputado Estadual Santa Catarina, candidato Deputado Estadual SC, Plano Parlamentar Santa Catarina, Dr. Paulo Coral 10555" },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${siteUrl}/` },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:alt", content: "Dr. Paulo Coral 10555 — Deputado Estadual por Santa Catarina" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: ogImage },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${siteUrl}/` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -36,6 +47,8 @@ export const Route = createFileRoute("/")({
           name: "Dr. Paulo Coral",
           jobTitle: "Candidato a Deputado Estadual por Santa Catarina",
           description,
+          url: `${siteUrl}/`,
+          image: ogImage,
           address: {
             "@type": "PostalAddress",
             addressRegion: "SC",
