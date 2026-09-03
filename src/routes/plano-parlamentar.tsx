@@ -58,8 +58,21 @@ function PlanoParlamentar() {
           <DecorDark />
           <div aria-hidden="true" className="absolute bottom-0 left-0 h-1 w-full hairline-gold" />
 
-          <div className="container-site relative grid items-end gap-10 pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
-            <div className="pb-12 lg:pb-24">
+          <div className="relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:pt-20">
+            <div className="relative flex justify-start lg:order-first">
+              {/* [IMAGEM_HERO_PLANO_PARLAMENTAR] — substituir quando a foto final for enviada */}
+              <img
+                src={heroFoto.url}
+                alt="Dr. Paulo Coral, médico, com estetoscópio"
+                width={848}
+                height={1264}
+                fetchPriority="high"
+                decoding="async"
+                className="relative z-10 w-[min(100%,30rem)] max-w-full object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            <div className="order-first px-[clamp(1.25rem,4vw,3rem)] pb-14 lg:order-none lg:pb-24 lg:pl-0 lg:pr-[max(clamp(1.25rem,4vw,3rem),calc((100vw-80rem)/2+1.25rem))]">
               <p className="inline-flex items-center gap-2 rounded-full border border-gold-500/45 bg-white/[0.04] px-4 py-1.5 eyebrow text-gold-400">
                 <BrandStar className="h-3 w-3" />
                 Plano de ação parlamentar
@@ -96,19 +109,6 @@ function PlanoParlamentar() {
                   <dd className="text-3xl font-black tracking-tight text-gold-500">4</dd>
                 </div>
               </dl>
-            </div>
-
-            <div className="relative flex justify-center lg:justify-end">
-              {/* [IMAGEM_HERO_PLANO_PARLAMENTAR] — substituir quando a foto final for enviada */}
-              <img
-                src={heroFoto.url}
-                alt="Dr. Paulo Coral, médico, com estetoscópio"
-                width={848}
-                height={1264}
-                fetchPriority="high"
-                decoding="async"
-                className="relative z-10 w-[min(100%,26rem)] object-contain drop-shadow-2xl"
-              />
             </div>
           </div>
         </section>
