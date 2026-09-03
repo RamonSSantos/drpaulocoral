@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Users } from "lucide-react";
-import { campaign } from "@/config/campaign";
+import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 const ThreadsIcon = ({ className }: { className?: string }) => (
@@ -12,7 +12,12 @@ const items = [
   { key: "instagram", label: "Instagram", href: campaign.social.instagram, Icon: Instagram },
   { key: "facebook", label: "Facebook", href: campaign.social.facebook, Icon: Facebook },
   { key: "threads", label: "Threads", href: campaign.social.threads, Icon: ThreadsIcon },
-  { key: "whatsapp", label: "WhatsApp", href: campaign.social.whatsapp, Icon: WhatsAppIcon },
+  {
+    key: "whatsapp",
+    label: "WhatsApp",
+    href: whatsappLink(mensagens.contato) ?? campaign.social.whatsapp,
+    Icon: WhatsAppIcon,
+  },
   {
     key: "grupo",
     label: "Grupo no WhatsApp",

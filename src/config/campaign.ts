@@ -38,4 +38,6 @@ export const mensagens = {
   doacao:
     "Olá! Gostaria de receber informações sobre como apoiar a campanha do Dr. Paulo Coral.",
   contato: "Olá! Gostaria de falar com a campanha do Dr. Paulo Coral.",
+  plano:
+    "Olá! Conheci o Plano Parlamentar do Dr. Paulo Coral e gostaria de saber mais sobre as propostas e como fazer parte.",
 };
