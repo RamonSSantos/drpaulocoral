@@ -81,7 +81,7 @@ export function SiteHeader() {
   const linkActive = "text-gold-500 after:w-full";
 
   const sectionClass = (hash: string) =>
-    `${linkBase} ${activeHash === hash && !isPlanoPage && !isPlanoSection ? linkActive : linkInactive}`;
+    `${linkBase} ${activeNavHash === hash && !isPlanoPage ? linkActive : linkInactive}`;
 
   return (
     <header
