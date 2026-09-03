@@ -61,6 +61,11 @@ export function SiteHeader() {
   const activeHash = useActiveSection();
   const isPlanoPage = location.pathname === "/plano-parlamentar";
   const isPlanoSection = PLANO_SECTIONS.has(activeHash);
+  const activeNavHash = PLANO_SECTIONS.has(activeHash)
+    ? "plano-parlamentar"
+    : CONTATO_SECTIONS.has(activeHash)
+      ? "faca-parte"
+      : activeHash;
   const wa = whatsappLink(mensagens.contato);
 
   useEffect(() => {
