@@ -9,7 +9,7 @@ import { BrandStar, DecorDark, DecorLight } from "@/components/BrandDecor";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 import { compromissosPlano, eixosPlano, pilares } from "@/data/plano";
 import heroFoto from "@/assets/paulo-coral-foto.png.asset.json";
-import retrato from "@/assets/paulo-coral-trajetoria.png.asset.json";
+import retrato from "@/assets/paulo-coral-trajetoria-clean.png";
 
 const title = "Plano Parlamentar | Dr. Paulo Coral — Deputado Estadual 10555";
 const description =
@@ -202,7 +202,7 @@ function PlanoParlamentar() {
             <Reveal className="relative self-start">
               <div className="relative overflow-hidden rounded-[1.25rem] bg-navy-900">
                 <img
-                  src={retrato.url}
+                  src={retrato}
                   alt="Retrato de Dr. Paulo Coral"
                   width={812}
                   height={1039}
