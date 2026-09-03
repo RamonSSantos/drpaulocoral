@@ -169,16 +169,28 @@ export function SiteHeader() {
           <ul className="flex flex-col divide-y divide-white/10">
             {nav.map((item) => (
               <li key={item.label}>
-                <Link
-                  to={item.to}
-                  hash={item.hash}
-                  onClick={() => setOpen(false)}
-                  className={`block py-4 text-base font-semibold transition-colors ${
-                    isActive(item) ? "text-gold-500" : "text-white/90"
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                {"hash" in item ? (
+                  <Link
+                    to={item.to}
+                    hash={item.hash}
+                    onClick={() => setOpen(false)}
+                    className={`block py-4 text-base font-semibold transition-colors ${
+                      isActive(item) ? "text-gold-500" : "text-white/90"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <Link
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className={`block py-4 text-base font-semibold transition-colors ${
+                      isActive(item) ? "text-gold-500" : "text-white/90"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
