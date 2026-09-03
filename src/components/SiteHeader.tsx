@@ -154,7 +154,9 @@ export function SiteHeader() {
                   to={item.to}
                   hash={item.hash}
                   onClick={() => setOpen(false)}
-                  className="block py-4 text-base font-semibold text-white/90"
+                  className={`block py-4 text-base font-semibold transition-colors ${
+                    activeHash === item.hash && !isPlano ? "text-gold-500" : "text-white/90"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -164,7 +166,9 @@ export function SiteHeader() {
               <Link
                 to="/plano-parlamentar"
                 onClick={() => setOpen(false)}
-                className="block py-4 text-base font-semibold text-white/90"
+                className={`block py-4 text-base font-semibold transition-colors ${
+                  isPlano ? "text-gold-500" : "text-white/90"
+                }`}
               >
                 Plano Parlamentar
               </Link>
