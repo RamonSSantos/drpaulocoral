@@ -163,9 +163,7 @@ export function SiteHeader() {
                   hash={item.hash}
                   onClick={() => setOpen(false)}
                   className={`block py-4 text-base font-semibold transition-colors ${
-                    activeHash === item.hash && !isPlanoPage && !isPlanoSection
-                      ? "text-gold-500"
-                      : "text-white/90"
+                    activeNavHash === item.hash && !isPlanoPage ? "text-gold-500" : "text-white/90"
                   }`}
                 >
                   {item.label}
