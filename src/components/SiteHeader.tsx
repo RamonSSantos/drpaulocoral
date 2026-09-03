@@ -102,11 +102,14 @@ export function SiteHeader() {
         >
           <div className="flex flex-1 items-center justify-evenly gap-2">
             {nav.map((item) => (
-              <Link key={item.label} to={item.to} hash={item.hash} className={linkClass}>
+              <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item.hash!)}>
                 {item.label}
               </Link>
             ))}
-            <Link to="/plano-parlamentar" className={linkClass}>
+            <Link
+              to="/plano-parlamentar"
+              className={`${linkBase} ${isPlano ? linkActive : linkInactive}`}
+            >
               Plano Parlamentar
             </Link>
           </div>
