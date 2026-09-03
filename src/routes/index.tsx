@@ -12,7 +12,7 @@ import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
 
 const siteUrl = "https://drpaulocoral.com.br";
-const ogImage = `${siteUrl}/__l5e/assets-v1/6318dd6b-6f41-464e-a701-227d0189e37f/paulo-coral-10555.png`;
+const ogImage = `${siteUrl}/og-campanha.png`;
 
 const title =
   "Paulo Coral 10555 | Deputado Estadual por Santa Catarina";

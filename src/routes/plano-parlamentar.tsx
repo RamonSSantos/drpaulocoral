@@ -11,9 +11,11 @@ import { compromissosPlano, eixosPlano, pilares } from "@/data/plano";
 import heroFoto from "@/assets/paulo-coral-foto.png.asset.json";
 import retrato from "@/assets/paulo-coral-trajetoria-clean.png";
 
+const siteUrl = "https://drpaulocoral.com.br";
 const title = "Plano Parlamentar | Dr. Paulo Coral — Deputado Estadual 10555";
 const description =
   "Conheça o Plano de Ação Parlamentar do Dr. Paulo Coral, candidato a Deputado Estadual por Santa Catarina. Cuidar, Gerar e Servir com propostas para saúde, trabalho, empreendedorismo e política limpa.";
+const ogImage = `${siteUrl}/og-campanha.png`;
 
 export const Route = createFileRoute("/plano-parlamentar")({
   head: () => ({
@@ -23,10 +25,16 @@ export const Route = createFileRoute("/plano-parlamentar")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: "/plano-parlamentar" },
+      { property: "og:url", content: `${siteUrl}/plano-parlamentar` },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:alt", content: "Dr. Paulo Coral 10555 — Deputado Estadual por Santa Catarina" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: ogImage },
     ],
-    links: [{ rel: "canonical", href: "/plano-parlamentar" }],
+    links: [{ rel: "canonical", href: `${siteUrl}/plano-parlamentar` }],
   }),
   component: PlanoParlamentar,
 });
