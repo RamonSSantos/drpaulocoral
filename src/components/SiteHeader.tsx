@@ -5,7 +5,11 @@ import logoLight from "@/assets/logo-light.png.asset.json";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
-const nav = [
+type NavItem =
+  | { label: string; to: "/"; hash: string }
+  | { label: string; to: "/plano-parlamentar" };
+
+const nav: NavItem[] = [
   { label: "Início", to: "/", hash: "topo" },
   { label: "Sobre", to: "/", hash: "sobre" },
   { label: "Plano Parlamentar", to: "/plano-parlamentar" },
