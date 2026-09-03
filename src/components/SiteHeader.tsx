@@ -120,11 +120,17 @@ export function SiteHeader() {
           className="hidden flex-1 items-center justify-between pl-6 md:flex lg:pl-8 xl:pl-16"
         >
           <div className="flex flex-1 items-center justify-evenly gap-2">
-            {nav.map((item) => (
-              <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item)}>
-                {item.label}
-              </Link>
-            ))}
+            {nav.map((item) =>
+              "hash" in item ? (
+                <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item)}>
+                  {item.label}
+                </Link>
+              ) : (
+                <Link key={item.label} to={item.to} className={sectionClass(item)}>
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
           <a
             href={wa ?? undefined}
