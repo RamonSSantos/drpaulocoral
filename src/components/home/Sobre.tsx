@@ -17,7 +17,7 @@ const trajetoria = [
   "Atuação na linha de frente durante a pandemia da COVID-19",
   "5 anos de experiência técnica no Detran",
   "Responsável técnico em clínica de tratamento para dependentes químicos",
-  "Experiência como empreendedor",
+  "Empreendedor",
   "Experiência como vereador",
 ];
 
