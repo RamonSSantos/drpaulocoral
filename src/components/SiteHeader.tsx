@@ -11,8 +11,9 @@ const nav = [
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
-const SECTIONS = ["topo", "sobre", "plano-parlamentar", "compromisso", "faca-parte"];
+const SECTIONS = ["topo", "sobre", "plano-parlamentar", "compromisso", "faca-parte", "acompanhe"];
 const PLANO_SECTIONS = new Set(["plano-parlamentar", "compromisso"]);
+const CONTATO_SECTIONS = new Set(["faca-parte", "acompanhe"]);
 
 function useActiveSection() {
   const [activeHash, setActiveHash] = useState("topo");
