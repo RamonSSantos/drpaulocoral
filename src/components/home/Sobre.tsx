@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { BrandStar } from "@/components/BrandDecor";
-import retrato from "@/assets/paulo-coral-trajetoria.png.asset.json";
+import retrato from "@/assets/paulo-coral-trajetoria-clean.png";
 
 const destaques = [
   { valor: "9", unidade: "anos", texto: "Atuação no SUS e Estratégia Saúde da Família." },
