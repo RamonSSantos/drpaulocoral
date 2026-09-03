@@ -3,6 +3,7 @@ import logoLight from "@/assets/logo-light.png.asset.json";
 import { campaign } from "@/config/campaign";
 import { SocialLinks } from "@/components/SocialLinks";
 import { BrandStar } from "@/components/BrandDecor";
+import { Heart } from "lucide-react";
 
 export function SiteFooter() {
   return (
