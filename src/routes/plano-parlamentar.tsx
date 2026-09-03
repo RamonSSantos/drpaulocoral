@@ -219,7 +219,7 @@ function PlanoParlamentar() {
                   <span aria-hidden="true" className="h-px w-10 hairline-gold" />
                   Experiência
                 </p>
-                <h2 className="mt-4 text-h2 text-navy-900">Quem é Dr. Paulo Coral</h2>
+                <h2 className="mt-4 text-h2 text-navy-900">Quem é o Dr. Paulo Coral</h2>
                 <div className="mt-5 measure space-y-4 text-base leading-relaxed text-muted-foreground">
                   <p>
                     Natural de Joinville, Dr. Paulo Coral é médico, especialista em Medicina do
