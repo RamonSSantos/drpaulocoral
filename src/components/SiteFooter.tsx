@@ -22,7 +22,7 @@ export function SiteFooter() {
             className="h-11 w-auto"
           />
           <p className="mt-5 text-sm font-semibold text-white/80">
-            Deputado Estadual — <span className="text-gold-500">{campaign.numero}</span>
+            Deputado Estadual -\u00a0<span className="text-gold-500">{campaign.numero}</span>
           </p>
           <p className="mt-1 eyebrow text-white/45">Cuidar. Gerar. Servir.</p>
         </div>
