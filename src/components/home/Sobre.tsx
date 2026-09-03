@@ -18,7 +18,7 @@ const trajetoria = [
   "5 anos de experiência técnica no Detran",
   "Responsável técnico em clínica de tratamento para dependentes químicos",
   "Empreendedor",
-  "Experiência como vereador",
+  "Ex-vereador de Balneário Piçarras",
 ];
 
 export function Sobre() {
