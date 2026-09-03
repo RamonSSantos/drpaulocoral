@@ -36,7 +36,7 @@ export function Sobre() {
           />
           <div className="relative overflow-hidden rounded-[1.25rem] bg-navy-900">
             <img
-              src={retrato.url}
+              src={retrato}
               alt="Dr. Paulo Coral"
               width={812}
               height={1039}
