@@ -85,13 +85,13 @@ export function SiteHeader() {
   const linkInactive = "text-white/85 hover:text-gold-500 after:w-0 hover:after:w-full";
   const linkActive = "text-gold-500 after:w-full";
 
-  const isActive = (item: (typeof nav)[number]) => {
+  const isActive = (item: NavItem) => {
     if (item.to === "/plano-parlamentar") return isPlanoPage || isPlanoSection;
     if (isPlanoPage) return false;
     return activeNavHash === item.hash;
   };
 
-  const sectionClass = (item: (typeof nav)[number]) =>
+  const sectionClass = (item: NavItem) =>
     `${linkBase} ${isActive(item) ? linkActive : linkInactive}`;
 
   return (
