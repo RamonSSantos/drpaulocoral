@@ -24,7 +24,7 @@ export const campaign = {
   },
 
   /** Informações eleitorais obrigatórias (CNPJ de campanha, etc.) */
-  legalInformation: "",
+  legalInformation: "CNPJ: 68.403.667/0001-79",
 } as const;
 
 export function whatsappLink(mensagem: string): string | null {
