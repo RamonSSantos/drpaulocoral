@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Dr. Paulo Coral" },
       { property: "og:site_name", content: "Dr. Paulo Coral" },
       { name: "theme-color", content: "#00143D" },
+      {
+        name: "google-site-verification",
+        content: "v3mnbimnGWATZwFm2kogWFeQVwhuOo1jMysTmzZH4No",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
