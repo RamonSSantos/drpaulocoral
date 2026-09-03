@@ -6,7 +6,7 @@
 
 export const campaign = {
   nome: "Dr. Paulo Coral",
-  cargo: "Candidato a Deputado Estadual por Santa Catarina",
+  cargo: "Seu Candidato a Deputado Estadual por Santa Catarina",
   numero: "10555",
 
   /** Somente dígitos, com DDI e DDD. Ex.: "5547999999999" */
