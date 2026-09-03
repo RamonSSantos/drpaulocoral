@@ -22,7 +22,7 @@ const items = [
     key: "grupo",
     label: "Grupo no WhatsApp",
     href: campaign.social.whatsappGrupo,
-    Icon: WhatsAppIcon,
+    Icon: Users,
   },
 ];
 
