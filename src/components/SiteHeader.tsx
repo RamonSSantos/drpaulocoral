@@ -5,9 +5,14 @@ import logoLight from "@/assets/logo-light.png.asset.json";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
-const nav = [
+type NavItem =
+  | { label: string; to: "/"; hash: string }
+  | { label: string; to: "/plano-parlamentar" };
+
+const nav: NavItem[] = [
   { label: "Início", to: "/", hash: "topo" },
   { label: "Sobre", to: "/", hash: "sobre" },
+  { label: "Plano Parlamentar", to: "/plano-parlamentar" },
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
@@ -80,8 +85,14 @@ export function SiteHeader() {
   const linkInactive = "text-white/85 hover:text-gold-500 after:w-0 hover:after:w-full";
   const linkActive = "text-gold-500 after:w-full";
 
-  const sectionClass = (hash: string) =>
-    `${linkBase} ${activeNavHash === hash && !isPlanoPage ? linkActive : linkInactive}`;
+  const isActive = (item: NavItem) => {
+    if (item.to === "/plano-parlamentar") return isPlanoPage || isPlanoSection;
+    if (isPlanoPage) return false;
+    return activeNavHash === item.hash;
+  };
+
+  const sectionClass = (item: NavItem) =>
+    `${linkBase} ${isActive(item) ? linkActive : linkInactive}`;
 
   return (
     <header
@@ -109,17 +120,17 @@ export function SiteHeader() {
           className="hidden flex-1 items-center justify-between pl-6 md:flex lg:pl-8 xl:pl-16"
         >
           <div className="flex flex-1 items-center justify-evenly gap-2">
-            {nav.map((item) => (
-              <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item.hash!)}>
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/plano-parlamentar"
-              className={`${linkBase} ${isPlanoPage || isPlanoSection ? linkActive : linkInactive}`}
-            >
-              Plano Parlamentar
-            </Link>
+            {nav.map((item) =>
+              "hash" in item ? (
+                <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item)}>
+                  {item.label}
+                </Link>
+              ) : (
+                <Link key={item.label} to={item.to} className={sectionClass(item)}>
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
           <a
             href={wa ?? undefined}
@@ -158,29 +169,30 @@ export function SiteHeader() {
           <ul className="flex flex-col divide-y divide-white/10">
             {nav.map((item) => (
               <li key={item.label}>
-                <Link
-                  to={item.to}
-                  hash={item.hash}
-                  onClick={() => setOpen(false)}
-                  className={`block py-4 text-base font-semibold transition-colors ${
-                    activeNavHash === item.hash && !isPlanoPage ? "text-gold-500" : "text-white/90"
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                {"hash" in item ? (
+                  <Link
+                    to={item.to}
+                    hash={item.hash}
+                    onClick={() => setOpen(false)}
+                    className={`block py-4 text-base font-semibold transition-colors ${
+                      isActive(item) ? "text-gold-500" : "text-white/90"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <Link
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className={`block py-4 text-base font-semibold transition-colors ${
+                      isActive(item) ? "text-gold-500" : "text-white/90"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
-            <li>
-              <Link
-                to="/plano-parlamentar"
-                onClick={() => setOpen(false)}
-                className={`block py-4 text-base font-semibold transition-colors ${
-                  isPlanoPage || isPlanoSection ? "text-gold-500" : "text-white/90"
-                }`}
-              >
-                Plano Parlamentar
-              </Link>
-            </li>
           </ul>
           <a
             href={wa ?? undefined}
