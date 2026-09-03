@@ -469,8 +469,8 @@ function PlanoParlamentar() {
               <div className="mt-10">
                 <p className="text-h3 font-bold">{campaign.nome}</p>
                 <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-white/70">
-                  Deputado Estadual — <span className="text-gold-500">{campaign.numero}</span> ·
-                  Republicanos
+                  DEPUTADO ESTADUAL - <span className="text-gold-500">{campaign.numero}</span> ·
+                  REPUBLICANOS
                 </p>
               </div>
 
