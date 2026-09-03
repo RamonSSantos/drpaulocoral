@@ -222,8 +222,7 @@ function PlanoParlamentar() {
                 <h2 className="mt-4 text-h2 text-navy-900">Quem é o Dr. Paulo Coral</h2>
                 <div className="mt-5 measure space-y-4 text-base leading-relaxed text-muted-foreground">
                   <p>
-                    Natural de Joinville, Dr. Paulo Coral é médico, especialista em Medicina do
-                    Tráfego e pós-graduado em Medicina de Família.
+                    Nascido em Joinville, criado em Jaraguá, Dr. Paulo Coral é médico, especialista em Medicina do Tráfego e pós-graduado em Medicina de Família.
                   </p>
                   <p>
                     Atuou por 9 anos no SUS e na Estratégia Saúde da Família, esteve na linha de
