@@ -11,7 +11,7 @@ import { Compromisso } from "@/components/home/Compromisso";
 import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
 
-const siteUrl = "https://drpaulocoral.lovable.app";
+const siteUrl = "https://drpaulocoral.com.br";
 const ogImage = `${siteUrl}/og-campanha.png`;
 
 const title =

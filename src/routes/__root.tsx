@@ -77,17 +77,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dr. Paulo Coral | Candidato a Deputado Estadual por Santa Catarina" },
-      {
-        name: "description",
-        content:
-          "Conheça Dr. Paulo Coral, médico e ex-vereador, candidato a Deputado Estadual por Santa Catarina.",
-      },
       { name: "author", content: "Dr. Paulo Coral" },
       { property: "og:site_name", content: "Dr. Paulo Coral" },
-      { property: "og:locale", content: "pt_BR" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#00143D" },
     ],
     links: [
