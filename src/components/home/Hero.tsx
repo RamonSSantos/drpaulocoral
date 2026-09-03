@@ -39,7 +39,9 @@ export function Hero() {
 
           <h1 className="mt-6 text-display uppercase animate-[fade-up_0.6s_ease-out_0.05s_both]">
             Dr. Paulo <span className="text-gold-500">Coral</span>
+            <span className="sr-only"> — Deputado Estadual por Santa Catarina 10555</span>
           </h1>
+
 
           <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-400 sm:text-base animate-[fade-up_0.6s_ease-out_0.08s_both]">
             <BrandStar className="h-3 w-3 text-gold-500" />
