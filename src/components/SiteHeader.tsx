@@ -164,24 +164,13 @@ export function SiteHeader() {
                   hash={item.hash}
                   onClick={() => setOpen(false)}
                   className={`block py-4 text-base font-semibold transition-colors ${
-                    activeNavHash === item.hash && !isPlanoPage ? "text-gold-500" : "text-white/90"
+                    isActive(item) ? "text-gold-500" : "text-white/90"
                   }`}
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                to="/plano-parlamentar"
-                onClick={() => setOpen(false)}
-                className={`block py-4 text-base font-semibold transition-colors ${
-                  isPlanoPage || isPlanoSection ? "text-gold-500" : "text-white/90"
-                }`}
-              >
-                Plano Parlamentar
-              </Link>
-            </li>
           </ul>
           <a
             href={wa ?? undefined}
