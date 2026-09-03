@@ -88,8 +88,13 @@ function PlanoParlamentar() {
               </p>
 
               <h1 className="mt-6 text-display uppercase">
-                Cuidar. Gerar. <span className="text-gold-500">Servir.</span>
+                Plano Parlamentar <span className="text-gold-500">Dr. Paulo Coral</span>
               </h1>
+
+              <p className="mt-4 text-h3 font-semibold uppercase tracking-[0.12em] text-gold-400">
+                Cuidar. Gerar. Servir.
+              </p>
+
 
               <p className="mt-6 measure text-body-lg text-white/80">
                 Um plano de ação para um mandato presente, responsável e comprometido com o futuro
