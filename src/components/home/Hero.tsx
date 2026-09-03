@@ -41,6 +41,11 @@ export function Hero() {
             Dr. Paulo <span className="text-gold-500">Coral</span>
           </h1>
 
+          <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-gold-400 sm:text-base animate-[fade-up_0.6s_ease-out_0.08s_both]">
+            <BrandStar className="h-3 w-3 text-gold-500" />
+            Cristão, médico e empreendedor
+          </p>
+
           <p className="mt-5 max-w-xl text-h3 font-medium text-white/90 animate-[fade-up_0.6s_ease-out_0.1s_both]">
             {campaign.cargo}
           </p>
