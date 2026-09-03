@@ -11,8 +11,9 @@ const nav = [
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
-const SECTIONS = ["topo", "sobre", "plano-parlamentar", "compromisso", "faca-parte"];
+const SECTIONS = ["topo", "sobre", "plano-parlamentar", "compromisso", "faca-parte", "acompanhe"];
 const PLANO_SECTIONS = new Set(["plano-parlamentar", "compromisso"]);
+const CONTATO_SECTIONS = new Set(["faca-parte", "acompanhe"]);
 
 function useActiveSection() {
   const [activeHash, setActiveHash] = useState("topo");
@@ -60,6 +61,11 @@ export function SiteHeader() {
   const activeHash = useActiveSection();
   const isPlanoPage = location.pathname === "/plano-parlamentar";
   const isPlanoSection = PLANO_SECTIONS.has(activeHash);
+  const activeNavHash = PLANO_SECTIONS.has(activeHash)
+    ? "plano-parlamentar"
+    : CONTATO_SECTIONS.has(activeHash)
+      ? "faca-parte"
+      : activeHash;
   const wa = whatsappLink(mensagens.contato);
 
   useEffect(() => {
@@ -75,7 +81,7 @@ export function SiteHeader() {
   const linkActive = "text-gold-500 after:w-full";
 
   const sectionClass = (hash: string) =>
-    `${linkBase} ${activeHash === hash && !isPlanoPage && !isPlanoSection ? linkActive : linkInactive}`;
+    `${linkBase} ${activeNavHash === hash && !isPlanoPage ? linkActive : linkInactive}`;
 
   return (
     <header
@@ -157,9 +163,7 @@ export function SiteHeader() {
                   hash={item.hash}
                   onClick={() => setOpen(false)}
                   className={`block py-4 text-base font-semibold transition-colors ${
-                    activeHash === item.hash && !isPlanoPage && !isPlanoSection
-                      ? "text-gold-500"
-                      : "text-white/90"
+                    activeNavHash === item.hash && !isPlanoPage ? "text-gold-500" : "text-white/90"
                   }`}
                 >
                   {item.label}
