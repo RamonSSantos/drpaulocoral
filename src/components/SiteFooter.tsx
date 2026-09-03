@@ -70,6 +70,21 @@ export function SiteFooter() {
         <div className="container-site py-6 text-xs leading-relaxed text-white/50">
           {campaign.legalInformation || "Informações eleitorais obrigatórias em breve."}
         </div>
+        <div className="container-site pb-6 text-center">
+          <p className="inline-flex items-center gap-1 text-xs text-white/45">
+            Desenvolvido com
+            <Heart aria-hidden="true" className="h-3 w-3 fill-gold-500 text-gold-500" />
+            por
+            <a
+              href="https://www.instagram.com/ramon.ssantoss/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white/70 transition-colors hover:text-gold-500"
+            >
+              Ramon Santos
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
