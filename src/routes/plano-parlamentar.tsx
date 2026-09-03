@@ -28,7 +28,7 @@ export const Route = createFileRoute("/plano-parlamentar")({
       { property: "og:type", content: "article" },
       { property: "og:url", content: `${siteUrl}/plano-parlamentar` },
       { property: "og:image", content: ogImage },
-      { property: "og:image:alt", content: "Dr. Paulo Coral 10555 — Deputado Estadual por Santa Catarina" },
+      { property: "og:image:alt", content: "Plano Parlamentar — Dr. Paulo Coral 10555, Deputado Estadual por Santa Catarina" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
