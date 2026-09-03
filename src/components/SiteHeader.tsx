@@ -1,6 +1,6 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logoLight from "@/assets/logo-light.png.asset.json";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
@@ -11,9 +11,53 @@ const nav = [
   { label: "Contato", to: "/", hash: "faca-parte" },
 ];
 
+const SECTIONS = ["topo", "sobre", "faca-parte"];
+
+function useActiveSection() {
+  const [activeHash, setActiveHash] = useState("topo");
+  const ratiosRef = useRef<Map<string, number>>(new Map());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          ratiosRef.current.set(entry.target.id, entry.intersectionRatio);
+        });
+
+        let best = "topo";
+        let bestRatio = -1;
+        ratiosRef.current.forEach((ratio, id) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            best = id;
+          }
+        });
+
+        setActiveHash(best);
+      },
+      {
+        rootMargin: "-80px 0px -45% 0px",
+        threshold: Array.from({ length: 21 }, (_, i) => i / 20),
+      }
+    );
+
+    SECTIONS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return activeHash;
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const activeHash = useActiveSection();
+  const isPlano = location.pathname === "/plano-parlamentar";
   const wa = whatsappLink(mensagens.contato);
 
   useEffect(() => {
@@ -23,8 +67,13 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const linkClass =
-    "relative text-sm font-semibold text-white/85 transition-colors hover:text-gold-500 after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-gold-500 after:transition-[width] hover:after:w-full";
+  const linkBase =
+    "relative text-sm font-semibold transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:bg-gold-500 after:transition-[width]";
+  const linkInactive = "text-white/85 hover:text-gold-500 after:w-0 hover:after:w-full";
+  const linkActive = "text-gold-500 after:w-full";
+
+  const sectionClass = (hash: string) =>
+    `${linkBase} ${activeHash === hash && !isPlano ? linkActive : linkInactive}`;
 
   return (
     <header
@@ -53,11 +102,14 @@ export function SiteHeader() {
         >
           <div className="flex flex-1 items-center justify-evenly gap-2">
             {nav.map((item) => (
-              <Link key={item.label} to={item.to} hash={item.hash} className={linkClass}>
+              <Link key={item.label} to={item.to} hash={item.hash} className={sectionClass(item.hash!)}>
                 {item.label}
               </Link>
             ))}
-            <Link to="/plano-parlamentar" className={linkClass}>
+            <Link
+              to="/plano-parlamentar"
+              className={`${linkBase} ${isPlano ? linkActive : linkInactive}`}
+            >
               Plano Parlamentar
             </Link>
           </div>
@@ -102,7 +154,9 @@ export function SiteHeader() {
                   to={item.to}
                   hash={item.hash}
                   onClick={() => setOpen(false)}
-                  className="block py-4 text-base font-semibold text-white/90"
+                  className={`block py-4 text-base font-semibold transition-colors ${
+                    activeHash === item.hash && !isPlano ? "text-gold-500" : "text-white/90"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -112,7 +166,9 @@ export function SiteHeader() {
               <Link
                 to="/plano-parlamentar"
                 onClick={() => setOpen(false)}
-                className="block py-4 text-base font-semibold text-white/90"
+                className={`block py-4 text-base font-semibold transition-colors ${
+                  isPlano ? "text-gold-500" : "text-white/90"
+                }`}
               >
                 Plano Parlamentar
               </Link>
