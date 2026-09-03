@@ -110,7 +110,7 @@ export function SiteHeader() {
             ))}
             <Link
               to="/plano-parlamentar"
-              className={`${linkBase} ${isPlano ? linkActive : linkInactive}`}
+              className={`${linkBase} ${isPlanoPage || isPlanoSection ? linkActive : linkInactive}`}
             >
               Plano Parlamentar
             </Link>
