@@ -57,13 +57,13 @@ export function Acompanhe() {
                   key={item}
                   className="flex items-start gap-3 text-sm font-extrabold uppercase tracking-wide text-navy-900"
                 >
-                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500 text-navy-900">
+                  <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
                     <Check className="h-4 w-4" aria-hidden="true" />
                   </span>
                   {item.includes("SANTA CATARINA") ? (
                     <span>
                       {item.replace("SANTA CATARINA", "").trim()}{" "}
-                      <span className="whitespace-nowrap text-gold-500">SANTA CATARINA</span>
+                      <span className="whitespace-nowrap font-black text-navy-900 underline decoration-2 underline-offset-4">SANTA CATARINA</span>
                     </span>
                   ) : (
                     item
@@ -77,7 +77,7 @@ export function Acompanhe() {
                 href={campaign.social.whatsappGrupo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex h-14 items-center gap-3 rounded-xl bg-gold-500 px-7 font-extrabold text-navy-900 shadow-card transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
+                className="mt-8 inline-flex h-14 items-center gap-3 rounded-xl bg-whatsapp px-7 font-extrabold text-white shadow-card transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2"
               >
                 <WhatsAppIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
                 Entrar no grupo oficial
