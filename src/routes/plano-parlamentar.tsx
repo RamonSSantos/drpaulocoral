@@ -239,9 +239,9 @@ function PlanoParlamentar() {
                     Nascido em Joinville e criado em Jaraguá do Sul, Dr. Paulo Coral é médico, formado pela UNISUL, na Grande Florianópolis, especialista em Medicina do Tráfego e pós-graduado em Medicina de Família.
                   </p>
                   <p>
-                    Atuou por 9 anos no SUS e na Estratégia Saúde da Família, esteve na linha de
-                    frente durante a pandemia da COVID-19 em Joinville e possui 5 anos de
-                    experiência técnica no Detran.
+                    Atuou por 9 anos no SUS e na Estratégia Saúde da Família em Balneário Piçarras e
+                    Joinville, esteve na linha de frente durante a pandemia da COVID-19 em Joinville e
+                    possui 5 anos de experiência técnica no Detran em Jaragua do Sul e Camboriú.
                   </p>
                   <p>
                     Também atuou como responsável técnico em clínica de tratamento para dependência
