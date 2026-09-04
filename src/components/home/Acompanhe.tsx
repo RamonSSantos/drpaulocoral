@@ -90,7 +90,7 @@ export function Acompanhe() {
           <div className="rounded-3xl border border-border bg-card p-6 shadow-card sm:p-8 lg:p-10">
             <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="eyebrow text-navy-700">Siga nas redes</p>
+                <p className="eyebrow text-navy-700">SIGA NAS REDES SOCIAIS</p>
                 <h3 className="mt-2 text-h3 text-navy-900">Acompanhe o Dr. Paulo Coral</h3>
               </div>
               <p className="max-w-md text-body-lg text-muted-foreground">
