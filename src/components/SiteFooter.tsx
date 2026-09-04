@@ -57,7 +57,7 @@ export function SiteFooter() {
           </nav>
 
           <div className="mt-8 lg:mt-0">
-            <h2 className="eyebrow text-white/45">Redes</h2>
+            <h2 className="eyebrow text-white/45">REDES SOCIAIS</h2>
             <span aria-hidden="true" className="mt-3 block h-px w-10 hairline-gold" />
             <div className="mt-4">
               <SocialLinks />
