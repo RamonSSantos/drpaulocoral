@@ -7,7 +7,7 @@ const cards = [
   {
     Icon: Users,
     titulo: "Seja um voluntário",
-    texto: "Faça parte da campanha.",
+    texto: "Nossa campanha é feita por voluntários que acreditam no Dr. Paulo Coral e apoiam esse projeto por Santa Catarina.",
     cta: "Quero ser voluntário",
     mensagem: mensagens.voluntario,
   },
@@ -35,7 +35,7 @@ export function FacaParte() {
           </p>
           <h2 className="mt-4 text-h2">Faça parte desse projeto.</h2>
           <p className="mt-4 measure text-body-lg text-white/70">
-            Quer contribuir com a campanha ou saber como apoiar? Fale conosco pelo WhatsApp.
+            Contribua com a nossa campanha.
           </p>
         </Reveal>
 
