@@ -63,7 +63,7 @@ export function Acompanhe() {
                   {item.includes("SANTA CATARINA") ? (
                     <span>
                       {item.replace("SANTA CATARINA", "").trim()}{" "}
-                      <span className="text-gold-500">SANTA CATARINA</span>
+                      <span className="whitespace-nowrap text-gold-500">SANTA CATARINA</span>
                     </span>
                   ) : (
                     item
