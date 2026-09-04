@@ -10,7 +10,7 @@ export const campaign = {
   numero: "10555",
 
   /** Somente dígitos, com DDI e DDD. Ex.: "5547999999999" */
-  whatsappNumber: "",
+  whatsappNumber: "5547996212094",
 
   /** URL do vídeo institucional (YouTube embed, Vimeo, etc.) */
   videoUrl: "",
