@@ -8,7 +8,7 @@ import trajetoriaClean from "@/assets/paulo-coral-trajetoria-clean.png";
 const benefits = [
   "CONTEÚDOS EXCLUSIVOS",
   "INFORMAÇÕES EM PRIMEIRA MÃO",
-  "PARTICIPPE DESSE MOVIMENTO POR SANTA CATARINA",
+  "PARTICIPE DESSE MOVIMENTO POR SANTA CATARINA",
 ];
 
 export function Acompanhe() {
