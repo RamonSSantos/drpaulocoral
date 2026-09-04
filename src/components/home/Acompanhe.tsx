@@ -91,7 +91,7 @@ export function Acompanhe() {
             <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="eyebrow text-navy-700">Siga nas redes</p>
-                <h3 className="mt-2 text-h3 text-navy-900">Acompanhe Dr. Paulo Coral</h3>
+                <h3 className="mt-2 text-h3 text-navy-900">Acompanhe o Dr. Paulo Coral</h3>
               </div>
               <p className="max-w-md text-body-lg text-muted-foreground">
                 Fique por dentro das informações da campanha nos canais oficiais.
