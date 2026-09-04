@@ -41,7 +41,7 @@ export function Acompanhe() {
 
             <h2 className="mt-4 text-h1 font-black uppercase leading-[0.95] text-navy-900">
               Entre no nosso grupo oficial de{" "}
-              <span className="text-gold-500">Whatsapp</span>
+              <span className="text-whatsapp">Whatsapp</span>
             </h2>
 
             <p className="mt-6 text-body-lg text-muted-foreground">
