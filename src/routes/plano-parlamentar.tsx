@@ -245,8 +245,8 @@ function PlanoParlamentar() {
                   </p>
                   <p>
                     Também atuou como responsável técnico em clínica de tratamento para dependência
-                    química, possui experiência empresarial e exerceu mandato como vereador em
-                    Balneário Piçarras.
+                    química em São João do Itaperiú, possui experiência empresarial com três CNPJs
+                    ativos e exerceu mandato como vereador em Balneário Piçarras.
                   </p>
                   <p>
                     Essa experiência forma a base de um projeto de mandato voltado à saúde, à
