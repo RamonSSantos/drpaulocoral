@@ -141,7 +141,7 @@ function PlanoParlamentar() {
                 atuação na Assembleia Legislativa de Santa Catarina.
               </p>
               <p className="mt-4 measure text-base leading-relaxed text-muted-foreground">
-                São propostas construídas a partir da experiência na saúde, no serviço público, no
+                São propostas construídas a partir da experiência no serviço público, no
                 empreendedorismo e na vida pública, com foco em resultados que possam ser
                 acompanhados pela população.
               </p>
