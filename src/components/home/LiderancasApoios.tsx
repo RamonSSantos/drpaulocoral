@@ -30,64 +30,105 @@ export function LiderancasApoios() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="group relative mt-12 overflow-hidden rounded-[1.25rem] border border-gold-500/20 bg-navy-950/60 shadow-2xl transition-transform duration-300 hover:-translate-y-1 sm:mt-14 lg:mt-16">
+          <div className="group mt-12 overflow-hidden rounded-[1.25rem] border border-gold-500/20 bg-navy-950/60 shadow-2xl transition-transform duration-300 hover:-translate-y-1 sm:mt-14 lg:mt-16">
             {/* Gold accent border top */}
             <div
               aria-hidden="true"
               className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-70"
             />
 
-            <img
-              src={liderancas.url}
-              alt="Jorginho, Dr. Paulo Coral e Flávio Bolsonaro — lideranças que apoiam o projeto para Santa Catarina"
-              width={1920}
-              height={1080}
-              loading="lazy"
-              decoding="async"
-              className="h-auto w-full"
-              style={{ maxWidth: "100%" }}
-            />
+            <div className="relative">
+              <img
+                src={liderancas.url}
+                alt="Jorginho, Dr. Paulo Coral e Flávio Bolsonaro — lideranças que apoiam o projeto para Santa Catarina"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full"
+                style={{ maxWidth: "100%" }}
+              />
 
-            {/* Subtle gradient overlay at bottom for cohesion */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-900/85 via-navy-900/40 to-transparent"
-            />
+              {/* Subtle gradient overlay at bottom for cohesion — desktop only */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-32 bg-gradient-to-t from-navy-900/85 via-navy-900/40 to-transparent sm:block"
+              />
 
-            {/* Candidate labels — positioned over the image */}
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between px-2 pb-3 sm:px-4 sm:pb-4 lg:pb-5">
-              <div className="flex-1 text-center">
-                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+              {/* Candidate labels — over the image on desktop */}
+              <div className="absolute inset-x-0 bottom-0 hidden items-end justify-between px-2 pb-3 sm:flex sm:px-4 sm:pb-4 lg:pb-5">
+                <div className="flex-1 text-center">
+                  <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+                    Jorginho
+                  </p>
+                  <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                    Governador de Santa Catarina
+                  </p>
+                  <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                    22
+                  </p>
+                </div>
+
+                <div className="flex-1 text-center">
+                  <p className="text-[0.7rem] font-extrabold uppercase tracking-wider text-white sm:text-sm lg:text-base">
+                    Dr. Paulo Coral
+                  </p>
+                  <p className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-gold-300 sm:text-xs lg:text-sm">
+                    Deputado Estadual
+                  </p>
+                  <p className="mt-0.5 text-base font-bold text-gold-400 sm:text-lg lg:text-xl">
+                    10555
+                  </p>
+                </div>
+
+                <div className="flex-1 text-center">
+                  <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+                    Flávio Bolsonaro
+                  </p>
+                  <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                    Presidente
+                  </p>
+                  <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                    22
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Candidate labels — below the image on mobile */}
+            <div className="grid grid-cols-3 gap-2 bg-navy-950/60 px-3 pb-4 pt-3 sm:hidden">
+              <div className="text-center">
+                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white">
                   Jorginho
                 </p>
-                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90">
                   Governador de Santa Catarina
                 </p>
-                <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                <p className="mt-0.5 text-sm font-bold text-gold-400">
                   22
                 </p>
               </div>
 
-              <div className="flex-1 text-center">
-                <p className="text-[0.7rem] font-extrabold uppercase tracking-wider text-white sm:text-sm lg:text-base">
+              <div className="text-center">
+                <p className="text-[0.7rem] font-extrabold uppercase tracking-wider text-white">
                   Dr. Paulo Coral
                 </p>
-                <p className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-gold-300 sm:text-xs lg:text-sm">
+                <p className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-gold-300">
                   Deputado Estadual
                 </p>
-                <p className="mt-0.5 text-base font-bold text-gold-400 sm:text-lg lg:text-xl">
+                <p className="mt-0.5 text-base font-bold text-gold-400">
                   10555
                 </p>
               </div>
 
-              <div className="flex-1 text-center">
-                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+              <div className="text-center">
+                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white">
                   Flávio Bolsonaro
                 </p>
-                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90">
                   Presidente
                 </p>
-                <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                <p className="mt-0.5 text-sm font-bold text-gold-400">
                   22
                 </p>
               </div>
