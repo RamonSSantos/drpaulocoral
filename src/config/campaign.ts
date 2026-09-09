@@ -15,6 +15,9 @@ export const campaign = {
   /** URL do vídeo institucional (YouTube embed, Vimeo, etc.) */
   videoUrl: "",
 
+  /** ID do pixel da Meta (Facebook) para rastreamento de campanha */
+  metaPixelId: "1079839594791742",
+
   social: {
     instagram: "https://www.instagram.com/drpaulocoral/",
     facebook: "https://www.facebook.com/share/1HbfXrcYEX/",
