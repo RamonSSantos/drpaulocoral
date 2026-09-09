@@ -70,6 +70,7 @@ function Home() {
         <Hero />
         <VideoSection />
         <Sobre />
+        <LiderancasApoios />
         <Principios />
         <PlanoResumo />
         <Compromisso />
