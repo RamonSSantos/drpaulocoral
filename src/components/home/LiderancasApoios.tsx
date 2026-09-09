@@ -51,8 +51,47 @@ export function LiderancasApoios() {
             {/* Subtle gradient overlay at bottom for cohesion */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-900/60 to-transparent"
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-900/85 via-navy-900/40 to-transparent"
             />
+
+            {/* Candidate labels — positioned over the image */}
+            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between px-2 pb-3 sm:px-4 sm:pb-4 lg:pb-5">
+              <div className="flex-1 text-center">
+                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+                  Jorginho
+                </p>
+                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                  Governador de Santa Catarina
+                </p>
+                <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                  22
+                </p>
+              </div>
+
+              <div className="flex-1 text-center">
+                <p className="text-[0.7rem] font-extrabold uppercase tracking-wider text-white sm:text-sm lg:text-base">
+                  Dr. Paulo Coral
+                </p>
+                <p className="mt-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-gold-300 sm:text-xs lg:text-sm">
+                  Deputado Estadual
+                </p>
+                <p className="mt-0.5 text-base font-bold text-gold-400 sm:text-lg lg:text-xl">
+                  10555
+                </p>
+              </div>
+
+              <div className="flex-1 text-center">
+                <p className="text-[0.65rem] font-extrabold uppercase tracking-wider text-white sm:text-xs lg:text-sm">
+                  Flávio Bolsonaro
+                </p>
+                <p className="mt-0.5 text-[0.55rem] font-medium uppercase tracking-widest text-gold-300/90 sm:text-[0.65rem] lg:text-xs">
+                  Presidente
+                </p>
+                <p className="mt-0.5 text-sm font-bold text-gold-400 sm:text-base lg:text-lg">
+                  22
+                </p>
+              </div>
+            </div>
           </div>
         </Reveal>
 
