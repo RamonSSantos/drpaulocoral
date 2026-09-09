@@ -5,6 +5,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Hero } from "@/components/home/Hero";
 import { VideoSection } from "@/components/home/VideoSection";
 import { Sobre } from "@/components/home/Sobre";
+import { LiderancasApoios } from "@/components/home/LiderancasApoios";
 import { Principios } from "@/components/home/Principios";
 import { PlanoResumo } from "@/components/home/PlanoResumo";
 import { Compromisso } from "@/components/home/Compromisso";
