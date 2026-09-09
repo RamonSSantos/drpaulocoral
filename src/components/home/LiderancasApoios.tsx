@@ -137,13 +137,17 @@ export function LiderancasApoios() {
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="relative mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+          <div className="relative mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-10">
             <BrandStar
               aria-hidden="true"
               className="h-8 w-8 text-gold-500/60"
             />
             <p className="text-center text-sm font-semibold uppercase tracking-widest text-gold-400 sm:text-base">
-              Jorginho · Dr. Paulo Coral · Flávio Bolsonaro
+              <span className="block sm:inline">Jorginho</span>
+              <span className="hidden sm:inline"> · </span>
+              <span className="block sm:inline">Dr. Paulo Coral</span>
+              <span className="hidden sm:inline"> · </span>
+              <span className="block sm:inline">Flávio Bolsonaro</span>
             </p>
             <BrandStar
               aria-hidden="true"
