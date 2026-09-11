@@ -11,6 +11,7 @@ import { PlanoResumo } from "@/components/home/PlanoResumo";
 import { Compromisso } from "@/components/home/Compromisso";
 import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
+import { campaign } from "@/config/campaign";
 
 const siteUrl = "https://drpaulocoral.com.br";
 const ogImage = `${siteUrl}/og-campanha.jpg`;
