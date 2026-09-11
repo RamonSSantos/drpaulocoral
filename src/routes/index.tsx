@@ -83,23 +83,54 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Person",
+              additionalType: "https://www.wikidata.org/wiki/Q618536",
               "@id": `${siteUrl}/#person`,
               name: "Dr. Paulo Coral",
-              alternateName: "Paulo Coral",
+              alternateName: ["Paulo Coral", "Paulo Coral 10555"],
+              honorificPrefix: "Dr.",
               jobTitle: "Candidato a Deputado Estadual por Santa Catarina",
               description,
               url: `${siteUrl}/`,
-              image: ogImage,
+              image: { "@id": `${siteUrl}/#ogimage` },
+              identifier: {
+                "@type": "PropertyValue",
+                name: "Número na urna",
+                value: campaign.numero,
+              },
+              hasOccupation: [
+                {
+                  "@type": "Occupation",
+                  name: "Médico",
+                  occupationalCategory: "Medicina do Tráfego e Medicina de Família",
+                },
+                {
+                  "@type": "Role",
+                  roleName: "Candidato a Deputado Estadual",
+                  startDate: "2026",
+                },
+              ],
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "UNISUL — Universidade do Sul de Santa Catarina",
+              },
+              birthPlace: {
+                "@type": "Place",
+                name: "Joinville, Santa Catarina",
+              },
+              homeLocation: {
+                "@type": "Place",
+                name: "Jaraguá do Sul, Santa Catarina",
+              },
+              knowsLanguage: "pt-BR",
               knowsAbout: [
                 "Saúde pública",
                 "Medicina do Tráfego",
                 "Empreendedorismo",
                 "Política de Santa Catarina",
               ],
-              memberOf: {
-                "@type": "Organization",
-                name: "Republicanos",
-              },
+              affiliation: { "@id": `${siteUrl}/#partido` },
+              memberOf: { "@id": `${siteUrl}/#partido` },
+              worksFor: { "@id": `${siteUrl}/#campanha` },
               address: {
                 "@type": "PostalAddress",
                 addressRegion: "SC",
@@ -108,6 +139,47 @@ export const Route = createFileRoute("/")({
               areaServed: {
                 "@type": "AdministrativeArea",
                 name: "Santa Catarina",
+              },
+              sameAs: [
+                campaign.social.instagram,
+                campaign.social.facebook,
+                campaign.social.threads,
+              ].filter(Boolean),
+            },
+            {
+              "@type": "PoliticalParty",
+              "@id": `${siteUrl}/#partido`,
+              name: "Republicanos",
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Santa Catarina",
+              },
+            },
+            {
+              "@type": "Organization",
+              "@id": `${siteUrl}/#campanha`,
+              name: "Campanha Dr. Paulo Coral 10555",
+              legalName: "Campanha Dr. Paulo Coral — Deputado Estadual",
+              description:
+                "Campanha de Dr. Paulo Coral, candidato a Deputado Estadual por Santa Catarina pelo número 10555.",
+              url: `${siteUrl}/`,
+              logo: ogImage,
+              image: { "@id": `${siteUrl}/#ogimage` },
+              taxID: campaign.legalInformation.replace("CNPJ: ", ""),
+              founder: { "@id": `${siteUrl}/#person` },
+              member: { "@id": `${siteUrl}/#person` },
+              parentOrganization: { "@id": `${siteUrl}/#partido` },
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Santa Catarina",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Fale com a campanha",
+                telephone: `+${campaign.whatsappNumber}`,
+                availableLanguage: "pt-BR",
+                areaServed: "BR",
+                url: campaign.social.whatsapp,
               },
               sameAs: [
                 campaign.social.instagram,
