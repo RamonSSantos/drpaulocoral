@@ -10,7 +10,6 @@ import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 import { compromissosPlano, eixosPlano, pilares } from "@/data/plano";
 import heroFoto from "@/assets/paulo-coral-foto.png.asset.json";
 import retrato from "@/assets/paulo-coral-trajetoria-clean.png";
-import ogPlano from "@/assets/og-plano-parlamentar.png.asset.json";
 
 const siteUrl = "https://drpaulocoral.com.br";
 const title = "Plano Parlamentar | Dr. Paulo Coral — Deputado Estadual 10555";
