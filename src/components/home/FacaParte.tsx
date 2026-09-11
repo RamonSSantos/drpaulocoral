@@ -14,7 +14,7 @@ const cards = [
   {
     Icon: HeartHandshake,
     titulo: "Apoie a campanha",
-    texto: "Saiba como contribuir.",
+    texto: "Contribua financeiramente, compartilhe nossas propostas nas redes sociais, participe de eventos e ajude a levar nossa mensagem a mais pessoas. Cada apoio fortalece a campanha por Santa Catarina.",
     cta: "Quero saber como doar",
     mensagem: mensagens.doacao,
   },
