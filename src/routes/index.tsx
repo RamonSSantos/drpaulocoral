@@ -11,6 +11,7 @@ import { PlanoResumo } from "@/components/home/PlanoResumo";
 import { Compromisso } from "@/components/home/Compromisso";
 import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
+import { campaign } from "@/config/campaign";
 
 const siteUrl = "https://drpaulocoral.com.br";
 const ogImage = `${siteUrl}/og-campanha.jpg`;
@@ -51,17 +52,70 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Paulo Coral",
-          jobTitle: "Candidato a Deputado Estadual por Santa Catarina",
-          description,
-          url: `${siteUrl}/`,
-          image: ogImage,
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "SC",
-            addressCountry: "BR",
-          },
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": `${siteUrl}/#website`,
+              url: `${siteUrl}/`,
+              name: "Dr. Paulo Coral 10555",
+              inLanguage: "pt-BR",
+              publisher: { "@id": `${siteUrl}/#person` },
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${siteUrl}/#webpage`,
+              url: `${siteUrl}/`,
+              name: title,
+              description,
+              inLanguage: "pt-BR",
+              isPartOf: { "@id": `${siteUrl}/#website` },
+              about: { "@id": `${siteUrl}/#person` },
+              primaryImageOfPage: { "@id": `${siteUrl}/#ogimage` },
+            },
+            {
+              "@type": "ImageObject",
+              "@id": `${siteUrl}/#ogimage`,
+              url: ogImage,
+              width: 1200,
+              height: 630,
+              caption:
+                "Paulo Coral 10555 — Deputado Estadual por Santa Catarina",
+            },
+            {
+              "@type": "Person",
+              "@id": `${siteUrl}/#person`,
+              name: "Dr. Paulo Coral",
+              alternateName: "Paulo Coral",
+              jobTitle: "Candidato a Deputado Estadual por Santa Catarina",
+              description,
+              url: `${siteUrl}/`,
+              image: ogImage,
+              knowsAbout: [
+                "Saúde pública",
+                "Medicina do Tráfego",
+                "Empreendedorismo",
+                "Política de Santa Catarina",
+              ],
+              memberOf: {
+                "@type": "Organization",
+                name: "Republicanos",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "SC",
+                addressCountry: "BR",
+              },
+              areaServed: {
+                "@type": "AdministrativeArea",
+                name: "Santa Catarina",
+              },
+              sameAs: [
+                campaign.social.instagram,
+                campaign.social.facebook,
+                campaign.social.threads,
+              ].filter(Boolean),
+            },
+          ],
         }),
       },
     ],

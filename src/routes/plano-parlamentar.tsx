@@ -42,6 +42,56 @@ export const Route = createFileRoute("/plano-parlamentar")({
       { name: "geo.placename", content: "Santa Catarina" },
     ],
     links: [{ rel: "canonical", href: `${siteUrl}/plano-parlamentar` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `${siteUrl}/plano-parlamentar#webpage`,
+              url: `${siteUrl}/plano-parlamentar`,
+              name: title,
+              description,
+              inLanguage: "pt-BR",
+              isPartOf: { "@id": `${siteUrl}/#website` },
+              about: { "@id": `${siteUrl}/#person` },
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${siteUrl}/plano-parlamentar#breadcrumb`,
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Início",
+                  item: `${siteUrl}/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Plano Parlamentar",
+                  item: `${siteUrl}/plano-parlamentar`,
+                },
+              ],
+            },
+            {
+              "@type": "ItemList",
+              "@id": `${siteUrl}/plano-parlamentar#eixos`,
+              name: "Eixos do Plano Parlamentar",
+              itemListElement: eixosPlano.map((eixo, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: eixo.titulo,
+                description: eixo.chamada,
+                url: `${siteUrl}/plano-parlamentar#${eixo.id}`,
+              })),
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: PlanoParlamentar,
 });
