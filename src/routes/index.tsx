@@ -13,7 +13,7 @@ import { FacaParte } from "@/components/home/FacaParte";
 import { Acompanhe } from "@/components/home/Acompanhe";
 
 const siteUrl = "https://drpaulocoral.com.br";
-const ogImage = `${siteUrl}/og-campanha.png`;
+const ogImage = `${siteUrl}/og-campanha.jpg`;
 
 const title =
   "Paulo Coral 10555 | Deputado Estadual por Santa Catarina";
@@ -31,12 +31,19 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/` },
       { property: "og:image", content: ogImage },
+      { property: "og:image:secure_url", content: ogImage },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Paulo Coral 10555 — Deputado Estadual por Santa Catarina" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: ogImage },
+      { name: "twitter:image:alt", content: "Paulo Coral 10555 — Deputado Estadual por Santa Catarina" },
+      { name: "geo.region", content: "BR-SC" },
+      { name: "geo.placename", content: "Santa Catarina" },
     ],
     links: [{ rel: "canonical", href: `${siteUrl}/` }],
     scripts: [
