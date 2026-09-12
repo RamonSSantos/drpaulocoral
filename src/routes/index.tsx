@@ -30,6 +30,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Dr. Paulo Coral 10555" },
       { property: "og:url", content: `${siteUrl}/` },
       { property: "og:image", content: ogImage },
       { property: "og:image:secure_url", content: ogImage },
