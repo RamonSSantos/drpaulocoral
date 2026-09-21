@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import logoLight from "@/assets/logo-light.png.asset.json";
+import logoLight from "@/assets/logo-light-220.webp.asset.json";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
@@ -110,7 +110,8 @@ export function SiteHeader() {
             src={logoLight.url}
             alt={`Logotipo ${campaign.nome}`}
             width={220}
-            height={110}
+            height={111}
+            decoding="async"
             className={`w-auto transition-[height] duration-300 ${scrolled ? "h-9" : "h-11"}`}
           />
         </Link>

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoLight from "@/assets/logo-light.png.asset.json";
+import logoLight from "@/assets/logo-light-220.webp.asset.json";
 import { campaign } from "@/config/campaign";
 import { SocialLinks } from "@/components/SocialLinks";
 import { BrandStar } from "@/components/BrandDecor";
@@ -18,8 +18,9 @@ export function SiteFooter() {
             src={logoLight.url}
             alt={`Logotipo ${campaign.nome}`}
             width={220}
-            height={110}
+            height={111}
             loading="lazy"
+            decoding="async"
             className="h-11 w-auto"
           />
           <p className="mt-5 text-sm font-semibold text-white/80">
