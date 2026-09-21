@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import logoLight from "@/assets/logo-light-220.webp.asset.json";
+import logoLightRetina from "@/assets/logo-light-440.webp.asset.json";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 
@@ -108,6 +109,8 @@ export function SiteHeader() {
         <Link to="/" hash="topo" className="flex min-w-0 items-center" aria-label={campaign.nome}>
           <img
             src={logoLight.url}
+            srcSet={`${logoLight.url} 220w, ${logoLightRetina.url} 440w`}
+            sizes="220px"
             alt={`Logotipo ${campaign.nome}`}
             width={220}
             height={111}

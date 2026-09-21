@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import logoLight from "@/assets/logo-light-220.webp.asset.json";
+import logoLightRetina from "@/assets/logo-light-440.webp.asset.json";
 import { campaign } from "@/config/campaign";
 import { SocialLinks } from "@/components/SocialLinks";
 import { BrandStar } from "@/components/BrandDecor";
@@ -16,6 +17,8 @@ export function SiteFooter() {
         <div>
           <img
             src={logoLight.url}
+            srcSet={`${logoLight.url} 220w, ${logoLightRetina.url} 440w`}
+            sizes="220px"
             alt={`Logotipo ${campaign.nome}`}
             width={220}
             height={111}
