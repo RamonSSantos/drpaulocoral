@@ -8,7 +8,8 @@ import { Reveal } from "@/components/Reveal";
 import { BrandStar, DecorDark, DecorLight } from "@/components/BrandDecor";
 import { campaign, mensagens, whatsappLink } from "@/config/campaign";
 import { compromissosPlano, eixosPlano, pilares } from "@/data/plano";
-import heroFoto from "@/assets/paulo-coral-foto.png.asset.json";
+import heroFotoMobile from "@/assets/paulo-coral-foto-480.webp.asset.json";
+import heroFotoDesktop from "@/assets/paulo-coral-foto-848.webp.asset.json";
 import retrato from "@/assets/paulo-coral-trajetoria-clean.webp.asset.json";
 
 const siteUrl = "https://drpaulocoral.com.br";
@@ -127,7 +128,9 @@ function PlanoParlamentar() {
             <div className="relative flex justify-start lg:order-first">
               {/* [IMAGEM_HERO_PLANO_PARLAMENTAR] — substituir quando a foto final for enviada */}
               <img
-                src={heroFoto.url}
+                src={heroFotoDesktop.url}
+                srcSet={`${heroFotoMobile.url} 480w, ${heroFotoDesktop.url} 848w`}
+                sizes="(min-width: 1024px) min(47vw, 480px), min(100vw, 480px)"
                 alt="Dr. Paulo Coral, médico, com estetoscópio"
                 width={848}
                 height={1264}

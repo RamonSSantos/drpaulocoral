@@ -1,6 +1,7 @@
 import { Play } from "lucide-react";
 import { useState } from "react";
-import thumb from "@/assets/paulo-coral-10555.png.asset.json";
+import thumbMobile from "@/assets/paulo-coral-video-640.webp.asset.json";
+import thumbDesktop from "@/assets/paulo-coral-video-1080.webp.asset.json";
 import { campaign } from "@/config/campaign";
 import { Reveal } from "@/components/Reveal";
 
@@ -39,7 +40,9 @@ export function VideoSection() {
               ) : (
                 <>
                   <img
-                    src={thumb.url}
+                    src={thumbDesktop.url}
+                    srcSet={`${thumbMobile.url} 640w, ${thumbDesktop.url} 1080w`}
+                    sizes="min(100vw - 2.5rem, 1280px)"
                     alt="Dr. Paulo Coral, candidato a Deputado Estadual, número 10555"
                     width={1080}
                     height={1080}

@@ -3,7 +3,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { campaign } from "@/config/campaign";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Check } from "lucide-react";
-import trajetoriaClean from "@/assets/paulo-coral-trajetoria-clean.png";
+import trajetoriaClean from "@/assets/paulo-coral-trajetoria-clean.webp.asset.json";
 
 const benefits = [
   "CONTEÚDOS EXCLUSIVOS",
@@ -23,11 +23,13 @@ export function Acompanhe() {
                 className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-gold-500/20 via-gold-500/5 to-transparent"
               />
               <img
-                src={trajetoriaClean}
+                src={trajetoriaClean.url}
                 alt="Dr. Paulo Coral"
                 width={600}
                 height={700}
                 loading="lazy"
+                decoding="async"
+                sizes="(min-width: 1024px) 46vw, min(100vw - 2.5rem, 448px)"
                 className="relative z-10 h-auto w-full rounded-3xl object-cover shadow-card"
               />
             </div>

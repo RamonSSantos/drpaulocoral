@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/Reveal";
 import { BrandStar } from "@/components/BrandDecor";
-import liderancas from "@/assets/liderancas.jpeg.asset.json";
+import liderancasMobile from "@/assets/liderancas-688.webp.asset.json";
+import liderancasDesktop from "@/assets/liderancas-1376.webp.asset.json";
 
 export function LiderancasApoios() {
   return (
@@ -39,14 +40,15 @@ export function LiderancasApoios() {
 
             <div className="relative">
               <img
-                src={liderancas.url}
+                src={liderancasDesktop.url}
+                srcSet={`${liderancasMobile.url} 688w, ${liderancasDesktop.url} 1376w`}
+                sizes="min(100vw - 2.5rem, 1280px)"
                 alt="Jorginho, Dr. Paulo Coral e Flávio Bolsonaro — lideranças que apoiam o projeto para Santa Catarina"
-                width={1920}
-                height={1080}
+                width={1376}
+                height={768}
                 loading="lazy"
                 decoding="async"
                 className="h-auto w-full"
-                style={{ maxWidth: "100%" }}
               />
 
               {/* Subtle gradient overlay at bottom for cohesion — desktop only */}

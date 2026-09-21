@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import foto from "@/assets/paulo-coral-foto.png.asset.json";
+import fotoMobile from "@/assets/paulo-coral-foto-480.webp.asset.json";
+import fotoDesktop from "@/assets/paulo-coral-foto-848.webp.asset.json";
 import { campaign } from "@/config/campaign";
 import { BrandStar, DecorDark } from "@/components/BrandDecor";
 
@@ -21,7 +22,9 @@ export function Hero() {
       <div className="relative grid items-end gap-8 pb-0 pt-14 lg:grid-cols-[0.94fr_1.06fr] lg:pt-20">
         <div className="relative flex justify-start lg:order-first">
           <img
-            src={foto.url}
+            src={fotoDesktop.url}
+            srcSet={`${fotoMobile.url} 480w, ${fotoDesktop.url} 848w`}
+            sizes="(min-width: 1024px) min(47vw, 480px), min(100vw, 480px)"
             alt="Dr. Paulo Coral, médico, de braços cruzados com estetoscópio"
             width={848}
             height={1264}
