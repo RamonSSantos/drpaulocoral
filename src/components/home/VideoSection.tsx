@@ -52,7 +52,6 @@ export function VideoSection() {
               {requested && hasVideo ? (
                 <video
                   ref={videoRef}
-                  src={campaign.VIDEO_URL}
                   controls
                   playsInline
                   preload="metadata"
@@ -62,7 +61,10 @@ export function VideoSection() {
                     setError(true);
                   }}
                   className="absolute inset-0 h-full w-full object-contain"
-                />
+                >
+                  {/* type hint: browsers then sniff the real MP4 container instead of trusting the x-m4v MIME */}
+                  <source src={campaign.VIDEO_URL} type="video/mp4" />
+                </video>
               ) : (
                 <>
                   <img
