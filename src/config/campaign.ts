@@ -12,8 +12,8 @@ export const campaign = {
   /** Somente dígitos, com DDI e DDD. Ex.: "5547999999999" */
   whatsappNumber: "5547996212094",
 
-  /** URLs externas do MP4 e da imagem vertical. Substituir os placeholders ao publicar o vídeo. */
-  VIDEO_URL: "[VIDEO_URL]",
+  /** URLs externos do vídeo (HostGator/CDN) e da imagem vertical de capa. */
+  VIDEO_URL: "https://video.drpaulocoral.com.br/apresentacao.m4v",
   VIDEO_POSTER_URL: "[VIDEO_POSTER_URL]",
 
   /** ID do pixel da Meta (Facebook) para rastreamento de campanha */
